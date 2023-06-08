@@ -32,10 +32,15 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 //Admin Pages
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     route::get('/dashboardadmin', [UIController::class, 'dashboardadmin'])->name('admin');
-    route::get('/jadwaladmin', [UIController::class, 'jadwaladmin'])->name('jadwaladmin');
     route::get('/kelasadmin', [UIController::class, 'kelasadmin'])->name('kelasadmin');
+    route::get('/walikelasadmin', [UIController::class, 'walikelasadmin'])->name('walikelasadmin');
     route::get('/guruadmin', [UIController::class, 'guruadmin'])->name('guruadmin');
     route::get('/muridadmin', [UIController::class, 'muridadmin'])->name('muridadmin');
+    route::get('/tambahmurid', [UIController::class, 'tambahmurid'])->name('tambahmurid');
+    route::post('/insertmurid', [UIController::class, 'insertmurid'])->name('insertmurid');
+    route::get('/editmurid/{id}', [UIController::class, 'editmurid'])->name('editmurid');
+    route::post('/updatemurid/{id}', [UIController::class, 'updatemurid'])->name('updatemurid');
+    route::get('/hapusmurid/{id}', [UIController::class, 'hapusmurid'])->name('hapusmurid');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {

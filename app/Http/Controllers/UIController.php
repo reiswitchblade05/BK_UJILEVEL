@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Murid;
 
 class UIController extends Controller
 {
@@ -12,14 +13,14 @@ class UIController extends Controller
         return view('dashboard.admin.admin');
     }
 
-    public function jadwaladmin()
-    {
-        return view('dashboard.admin.jadwaladmin');
-    }
-
     public function kelasadmin()
     {
         return view('dashboard.admin.kelasadmin');
+    }
+
+    public function walikelasadmin()
+    {
+        return view('dashboard.admin.walikelasadmin');
     }
 
     public function guruadmin()
@@ -29,7 +30,39 @@ class UIController extends Controller
 
     public function muridadmin()
     {
-        return view('dashboard.admin.muridadmin');
+        $data = Murid::all();
+        return view('dashboard.admin.muridadmin', compact('data'));
+    }
+
+    public function tambahmurid()
+    {
+        return view('dashboard.admin.tambahmurid');
+    }
+
+    public function insertmurid(Request $request)
+    {
+        Murid::create($request->all());
+        return redirect()->route('muridadmin')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function editmurid($id)
+    {
+        $data = Murid::find($id);
+        return view('dashboard.admin.editmurid', compact('data'));
+    }
+
+    public function updatemurid(Request $request, $id)
+    {
+        $data = Murid::find($id);
+        $data->update($request->all());
+        return redirect()->route('muridadmin')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapusmurid(Request $request, $id)
+    {
+        $data = Murid::find($id);
+        $data->delete();
+        return redirect()->route('muridadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
     public function guru()

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -49,7 +49,8 @@
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-22.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy
+                                                            Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -57,7 +58,8 @@
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-33.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is
+                                                        now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
                                                 </div>
@@ -65,7 +67,8 @@
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-44.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is
+                                                        watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -73,7 +76,8 @@
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-55.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica
+                                                            Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -92,24 +96,28 @@
                                 <li class="connection-list">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/github.png" alt="" > <span>Github</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/github.png" alt=""> <span>Github</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/dribbble.png" alt="">
+                                                <span>Dribbble</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/dropbox.png" alt="">
+                                                <span>Dropbox</span></a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/bitbucket.png" alt="">
+                                                <span>Bitbucket</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/mail_chimp.png" alt=""><span>Mail
+                                                    chimp</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/slack.png" alt="" > <span>Slack</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/slack.png" alt=""> <span>Slack</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -121,7 +129,7 @@
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets-admin/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
-                                <div class="nav-user-info">
+                                <div class="nav-user-info">-admin
                                     <h5 class="mb-0 text-white nav-user-name">Admin</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
@@ -153,13 +161,13 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{ url('admin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{{ url('jadwaladmin') }}"><i class="fab fa-fw fa-wpforms"></i>Jadwal</a>
+                                <a class="nav-link" href="{{ url('dashboardadmin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('kelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('guruadmin') }}" ><i class="fas fa-users"></i>Guru</a>
@@ -168,7 +176,7 @@
                                 <a class="nav-link" href="{{ url('muridadmin') }}" ><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
                             </li>
                             <li class="nav-item">
-                            <form id="logout-form" action="{{ url('logout') }}" method="GET">
+                            <form id="logout-form" action="{{ url('/logout') }}" method="GET">
                                 {{ csrf_field() }}
                                 <button class="nav-link" type="submit" style="background: #241f68; text-align:left; width: 240px; border:none; margin-top:2.5vw;"><i class="fas fa-arrow-left" style="padding-left: 2px; padding-right: 3px;"></i>Logout</button>
                             </form>
@@ -193,13 +201,15 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Jadwal </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <h2 class="pageheader-title">Wali Kelas </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus
+                                    vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Jadwal</li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">Wali Kelas</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -217,14 +227,14 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Monitor Jadwal</h5>
+                                    <h5 class="card-header">Tabel Wali Kelas</h5>
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered first">
                                                 <thead>
                                                     <tr>
-                                                        <th>No.</th>
-                                                        <th>Meeting</th>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
                                                         <th>Office</th>
                                                         <th>Age</th>
                                                         <th>Start date</th>
@@ -704,44 +714,44 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div style="padding-bottom: 20vw;">
+                    <!-- ============================================================== -->
+                    <!-- footer -->
+                    <!-- ============================================================== -->
+
+                    <!-- ============================================================== -->
+                    <!-- end footer -->
+                    <!-- ============================================================== -->
                 </div>
-            </div style="padding-bottom: 20vw;">
+                <!-- ============================================================== -->
+                <!-- end wrapper  -->
+                <!-- ============================================================== -->
+            </div>
             <!-- ============================================================== -->
-            <!-- footer -->
+            <!-- end main wrapper  -->
             <!-- ============================================================== -->
-            
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    <script src="assets-admin/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="assets-admin/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="assets-admin/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="assets-admin/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="assets-admin/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="assets-admin/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="assets-admin/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="assets-admin/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="assets-admin/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="assets-admin/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets-admin/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets-admin/libs/js/dashboard-ecommerce.js"></script>
+            <!-- Optional JavaScript -->
+            <!-- jquery 3.3.1 -->
+            <script src="assets-admin/vendor/jquery/jquery-3.3.1.min.js"></script>
+            <!-- bootstap bundle js -->
+            <script src="assets-admin/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+            <!-- slimscroll js -->
+            <script src="assets-admin/vendor/slimscroll/jquery.slimscroll.js"></script>
+            <!-- main js -->
+            <script src="assets-admin/libs/js/main-js.js"></script>
+            <!-- chart chartist js -->
+            <script src="assets-admin/vendor/charts/chartist-bundle/chartist.min.js"></script>
+            <!-- sparkline js -->
+            <script src="assets-admin/vendor/charts/sparkline/jquery.sparkline.js"></script>
+            <!-- morris js -->
+            <script src="assets-admin/vendor/charts/morris-bundle/raphael.min.js"></script>
+            <script src="assets-admin/vendor/charts/morris-bundle/morris.js"></script>
+            <!-- chart c3 js -->
+            <script src="assets-admin/vendor/charts/c3charts/c3.min.js"></script>
+            <script src="assets-admin/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+            <script src="assets-admin/vendor/charts/c3charts/C3chartjs.js"></script>
+            <script src="assets-admin/libs/js/dashboard-ecommerce.js"></script>
 </body>
- 
+
 </html>

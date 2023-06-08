@@ -157,13 +157,13 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{ url('admin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('jadwaladmin') }}"><i class="fab fa-fw fa-wpforms"></i>Jadwal</a>
+                                <a class="nav-link" href="{{ url('dashboardadmin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
@@ -218,13 +218,48 @@
                     <div class="ecommerce-widget">
 
                         <div class="row">
+                            <style>
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 96px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+
+                                .btn-edit {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 55px;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+
+                                .btn-delete {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 66px;
+                                    color: #fff;
+                                    background-color: #d00f0f;
+                                }
+                            </style>
                             <!-- ============================================================== -->
                             <!-- basic table  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Tabel Murid</h5>
+                                    @if ($message = Session::get('success'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @endif
                                     <div class="card-body">
+                                        <button class="btn-tambah"> <a href="{{ url('tambahmurid') }}" style="color: #fff;">Tambah</a> </button>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered first">
                                                 <thead>
@@ -232,36 +267,26 @@
                                                         <th>No.</th>
                                                         <th>Nama Murid</th>
                                                         <th>Kelas</th>
-                                                        <th>Email</th>
-                                                        <th>Password</th>
+                                                        <th>Jenis Kelamin</th>
                                                         <th>Misc.</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @php
+                                                    $no = 1;
+                                                    @endphp
+                                                    @foreach ($data as $row)
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td>Iwan Dwi Santoso</td>
-                                                        <td>11</td>
-                                                        <td>iwan@gmail.com</td>
-                                                        <td>12345</td>
-                                                        <td></td>
+                                                        <td>{{ $no++ }}</td>
+                                                        <td>{{ $row->nama_siswa }}</td>
+                                                        <td>{{ $row->kelas }}</td>
+                                                        <td>{{ $row->jenis_kelamin }}</td>
+                                                        <td>
+                                                            <button class="btn-edit"><a href="/editmurid/{{ $row->id }}" style="color: #fff;">Edit</a></button>
+                                                            <button class="btn-delete"><a href="/hapusmurid/{{ $row->id }}" style="color: #fff;">Delete</a></button>
+                                                        </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Raisa Maharani Rahayu</td>
-                                                        <td>11</td>
-                                                        <td>raisa@gmail.com</td>
-                                                        <td>12345</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Fatimah Chandra Verawati</td>
-                                                        <td>11</td>
-                                                        <td>fatimah@gmail.com</td>
-                                                        <td>12345</td>
-                                                        <td></td>
-                                                    </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>

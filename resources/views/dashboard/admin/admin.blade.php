@@ -153,13 +153,13 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('admin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('jadwaladmin') }}"><i class="fab fa-fw fa-wpforms"></i>Jadwal</a>
+                                <a class="nav-link active" href="{{ url('dashboardadmin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('kelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('guruadmin') }}" ><i class="fas fa-users"></i>Guru</a>
