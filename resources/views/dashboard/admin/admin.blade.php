@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -92,13 +92,13 @@
                                 <li class="connection-list">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/github.png" alt="" > <span>Github</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/github.png" alt=""> <span>Github</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/dribbble.png" alt=""> <span>Dribbble</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/dropbox.png" alt=""> <span>Dropbox</span></a>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -106,10 +106,10 @@
                                             <a href="#" class="connection-item"><img src="assets-admin/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/mail_chimp.png" alt=""><span>Mail chimp</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-admin/images/slack.png" alt="" > <span>Slack</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-admin/images/slack.png" alt=""> <span>Slack</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -156,23 +156,23 @@
                                 <a class="nav-link active" href="{{ url('dashboardadmin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('kelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
+                                <a class="nav-link" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{ url('guruadmin') }}" ><i class="fas fa-users"></i>Guru</a>
+                                <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('muridadmin') }}" ><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
+                                <a class="nav-link" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
                             </li>
                             <li class="nav-item">
-                            <form id="logout-form" action="{{ url('logout') }}" method="GET">
-                                {{ csrf_field() }}
-                                <button class="nav-link" type="submit" style="background: #241f68; text-align:left; width: 240px; border:none; margin-top:2.5vw;"><i class="fas fa-arrow-left" style="padding-left: 2px; padding-right: 3px;"></i>Logout</button>
-                            </form>
-                              </li>
+                                <form id="logout-form" action="{{ url('logout') }}" method="GET">
+                                    {{ csrf_field() }}
+                                    <button class="nav-link" type="submit" style="background: #241f68; text-align:left; width: 240px; border:none; margin-top:2.5vw;"><i class="fas fa-arrow-left" style="padding-left: 2px; padding-right: 3px;"></i>Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -225,7 +225,7 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Guru</h5>
+                                        <h5 class="text-muted">Wali Kelas</h5>
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">12</h1>
                                         </div>
@@ -235,9 +235,19 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Murid</h5>
+                                        <h5 class="text-muted">Guru</h5>
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">13</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">Murid</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">14</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +259,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            
+
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
@@ -283,5 +293,5 @@
     <script src="assets-admin/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets-admin/libs/js/dashboard-ecommerce.js"></script>
 </body>
- 
+
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Murid;
+use App\Models\Guru;
 
 class UIController extends Controller
 {
@@ -25,7 +26,39 @@ class UIController extends Controller
 
     public function guruadmin()
     {
-        return view('dashboard.admin.guruadmin');
+        $row = Guru::all();
+        return view('dashboard.admin.guruadmin', compact('row'));
+    }
+
+    public function tambahguru()
+    {
+        return view('dashboard.admin.tambahguru');
+    }
+
+    public function insertguru(Request $request)
+    {
+        Guru::create($request->all());
+        return redirect()->route('guruadmin')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function editguru($id)
+    {
+        $row = Guru::find($id);
+        return view('dashboard.admin.editguru', compact('row'));
+    }
+
+    public function updateguru(Request $request, $id)
+    {
+        $row = Guru::find($id);
+        $row->update($request->all());
+        return redirect()->route('guruadmin')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapusguru(Request $request, $id)
+    {
+        $row = Guru::find($id);
+        $row->delete();
+        return redirect()->route('guruadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
     public function muridadmin()

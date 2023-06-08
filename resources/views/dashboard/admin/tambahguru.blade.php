@@ -163,13 +163,13 @@
                                 <a class="nav-link" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('walikelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
+                                <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
+                                <a class="nav-link active" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
                             </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">
@@ -223,28 +223,20 @@
                                     border-radius: 7px;
                                     padding: 7px;
                                     margin-bottom: 1.4vw;
-                                    width: 96px;
+                                    width: 110px;
                                     border: none;
                                     color: #fff;
                                     background-color: #1d3988;
                                 }
 
-                                .btn-edit {
+                                .btn-back {
                                     border-radius: 7px;
                                     padding: 7px;
                                     border: none;
-                                    width: 55px;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
                                     color: #fff;
                                     background-color: #1d3988;
-                                }
-
-                                .btn-delete {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 66px;
-                                    color: #fff;
-                                    background-color: #d00f0f;
                                 }
                             </style>
                             <!-- ============================================================== -->
@@ -252,46 +244,35 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Guru</h5>
-                                    @if ($message = Session::get('success'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @endif
+                                    <h5 class="card-header">Tambah Guru</h5>
                                     <div class="card-body">
-                                        <button class="btn-tambah"> <a href="{{ url('tambahguru') }}" style="color: #fff;">Tambah</a> </button>
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-bordered first">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No.</th>
-                                                        <th>Nama Guru</th>
-                                                        <th>Kelas</th>
-                                                        <th>Jenis Kelamin</th>
-                                                        <th>Nomor Telepon</th>
-                                                        <th>Misc.</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @php
-                                                    $no = 1;
-                                                    @endphp
-                                                    @foreach ($row as $data)
-                                                    <tr>
-                                                        <td>{{ $no++ }}</td>
-                                                        <td>{{ $data->nama_guru }}</td>
-                                                        <td>{{ $data->kelas }}</td>
-                                                        <td>{{ $data->jenis_kelamin }}</td>
-                                                        <td>{{ $data->no_telepon }}</td>
-                                                        <td>
-                                                            <button class="btn-edit"><a href="/editguru/{{ $data->id }}" style="color: #fff;">Edit</a></button>
-                                                            <button class="btn-delete"><a href="/hapusguru/{{ $data->id }}" style="color: #fff;">Delete</a></button>
-                                                        </td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
+                                    <form action="{{ url('insertguru') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="nama_guru" placeholder="Nama Guru" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                         </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <select name="jenis_kelamin" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                            <option selected>Jenis Kelamin</option>
+                                            <option value="Laki-Laki">Laki-Laki</option>
+                                            <option value="Perempuan">Perempuan</option>
+                                        </select>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="nip" placeholder="NIP" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="no_telepon" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3 mt-3">
+                                            <input type="text" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="password" placeholder="Password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('guruadmin') }}" style="color: #fff;">Kembali</a></button>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
