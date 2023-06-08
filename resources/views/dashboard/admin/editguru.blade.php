@@ -166,10 +166,10 @@
                                 <a class="nav-link" href="{{ url('walikelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
+                                <a class="nav-link active" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
+                                <a class="nav-link" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
                             </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">

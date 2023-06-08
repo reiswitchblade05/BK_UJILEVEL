@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Murid;
 use App\Models\Guru;
+use App\Models\Kelas;
+use App\Models\Walikelas;
 
 class UIController extends Controller
 {
@@ -16,12 +18,76 @@ class UIController extends Controller
 
     public function kelasadmin()
     {
-        return view('dashboard.admin.kelasadmin');
+        $row = Kelas::all();
+        return view('dashboard.admin.kelasadmin', compact('row'));
+    }
+
+    public function tambahkelas()
+    {
+        return view('dashboard.admin.tambahkelas');
+    }
+
+    public function insertkelas(Request $request)
+    {
+        Kelas::create($request->all());
+        return redirect()->route('kelasadmin')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function editkelas($id)
+    {
+        $row = Kelas::find($id);
+        return view('dashboard.admin.editkelas', compact('row'));
+    }
+
+    public function updatekelas(Request $request, $id)
+    {
+        $row = Kelas::find($id);
+        $row->update($request->all());
+        return redirect()->route('kelasadmin')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapuskelas(Request $request, $id)
+    {
+        $row = Kelas::find($id);
+        $row->delete();
+        return redirect()->route('kelasadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
     public function walikelasadmin()
     {
-        return view('dashboard.admin.walikelasadmin');
+        $data = Walikelas::all();
+        return view('dashboard.admin.walikelasadmin', compact('data'));
+    }
+
+    public function tambahwalikelas()
+    {
+        return view('dashboard.admin.tambahwalikelas');
+    }
+
+    public function insertwalikelas(Request $request)
+    {
+        Walikelas::create($request->all());
+        return redirect()->route('walikelasadmin')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function editwalikelas($id)
+    {
+        $data = Walikelas::find($id);
+        return view('dashboard.admin.editwalikelas', compact('data'));
+    }
+
+    public function updatewalikelas(Request $request, $id)
+    {
+        $data = Walikelas::find($id);
+        $data->update($request->all());
+        return redirect()->route('walikelasadmin')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapuswalikelas(Request $request, $id)
+    {
+        $data = Walikelas::find($id);
+        $data->delete();
+        return redirect()->route('walikelasadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
     public function guruadmin()

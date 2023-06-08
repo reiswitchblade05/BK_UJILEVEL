@@ -160,13 +160,13 @@
                                 <a class="nav-link" href="{{ url('dashboardadmin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
+                                <a class="nav-link active" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
+                                <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
@@ -197,7 +197,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Guru </h2>
+                                <h2 class="pageheader-title">Kelas </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus
                                     vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
@@ -205,7 +205,7 @@
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Guru</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Kelas</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -244,35 +244,21 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tambah Guru</h5>
+                                    <h5 class="card-header">Tambah Kelas</h5>
                                     <div class="card-body">
-                                    <form action="{{ url('insertguru') }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="nama_guru" placeholder="Nama Guru" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <select name="jenis_kelamin" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected>Jenis Kelamin</option>
-                                            <option value="Laki-Laki">Laki-Laki</option>
-                                            <option value="Perempuan">Perempuan</option>
-                                        </select>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="nip" placeholder="NIP" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="no_telepon" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3 mt-3">
-                                            <input type="text" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="password" placeholder="Password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('guruadmin') }}" style="color: #fff;">Kembali</a></button>
-                                    </form>
+                                        <form action="{{ url('insertkelas') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="nama_kelas" placeholder="Nama Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="guru_bk" placeholder="Guru BK" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="wali_kelas" placeholder="Wali Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('kelasadmin') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

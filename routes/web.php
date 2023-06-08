@@ -32,8 +32,22 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 //Admin Pages
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     route::get('/dashboardadmin', [UIController::class, 'dashboardadmin'])->name('admin');
+
+    //Kelas Pages
     route::get('/kelasadmin', [UIController::class, 'kelasadmin'])->name('kelasadmin');
+    route::get('/tambahkelas', [UIController::class, 'tambahkelas'])->name('tambahkelas');
+    route::post('/insertkelas', [UIController::class, 'insertkelas'])->name('insertkelas');
+    route::get('/editkelas/{id}', [UIController::class, 'editkelas'])->name('editkelas');
+    route::post('/updatekelas/{id}', [UIController::class, 'updatekelas'])->name('updatekelas');
+    route::get('/hapuskelas/{id}', [UIController::class, 'hapuskelas'])->name('hapuskelas');
+
+    //Walikelas Pages
     route::get('/walikelasadmin', [UIController::class, 'walikelasadmin'])->name('walikelasadmin');
+    route::get('/tambahwalikelas', [UIController::class, 'tambahwalikelas'])->name('tambahwalikelas');
+    route::post('/insertwalikelas', [UIController::class, 'insertwalikelas'])->name('insertwalikelas');
+    route::get('/editwalikelas/{id}', [UIController::class, 'editwalikelas'])->name('editwalikelas');
+    route::post('/updatewalikelas/{id}', [UIController::class, 'updatewalikelas'])->name('updatewalikelas');
+    route::get('/hapuswalikelas/{id}', [UIController::class, 'hapuswalikelas'])->name('hapuswalikelas');
 
     //Guru Pages
     route::get('/guruadmin', [UIController::class, 'guruadmin'])->name('guruadmin');

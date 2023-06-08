@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html"><img src="assets-admin/images/logo.png" alt="" style="width: 135px;"></a>
+                <a class="navbar-brand" href="index.html"><img src="{{asset('assets-admin/images/logo.png')}}" alt="" style="width: 135px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +48,7 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-admin/images/avatar-22.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-admin/images/avatar-22.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy
                                                             Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
@@ -57,7 +57,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-admin/images/avatar-33.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-admin/images/avatar-33.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is
                                                         now following you
                                                         <div class="notification-date">2 days ago</div>
@@ -66,7 +66,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-admin/images/avatar-44.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-admin/images/avatar-44.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is
                                                         watching your main repository
                                                         <div class="notification-date">2 min ago</div>
@@ -75,7 +75,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-admin/images/avatar-55.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-admin/images/avatar-55.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica
                                                             Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
@@ -123,7 +123,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expand-admined="false"><img src="assets-admin/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expand-admined="false"><img src="{{asset('assets-admin/images/avatar-admin.jpg')}}" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Admin</h5>
@@ -160,13 +160,13 @@
                                 <a class="nav-link" href="{{ url('dashboardadmin') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
+                                <a class="nav-link active" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
+                                <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
@@ -197,7 +197,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Guru </h2>
+                                <h2 class="pageheader-title">Kelas </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus
                                     vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
@@ -205,7 +205,7 @@
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Guru</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Kelas</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -244,35 +244,21 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tambah Guru</h5>
+                                    <h5 class="card-header">Update Kelas</h5>
                                     <div class="card-body">
-                                    <form action="{{ url('insertguru') }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="nama_guru" placeholder="Nama Guru" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <select name="jenis_kelamin" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected>Jenis Kelamin</option>
-                                            <option value="Laki-Laki">Laki-Laki</option>
-                                            <option value="Perempuan">Perempuan</option>
-                                        </select>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="nip" placeholder="NIP" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="no_telepon" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3 mt-3">
-                                            <input type="text" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="password" placeholder="Password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('guruadmin') }}" style="color: #fff;">Kembali</a></button>
-                                    </form>
+                                        <form action="/updatekelas/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" value="{{ $row->nama_kelas }}" name="nama_kelas" placeholder="Nama Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" value="{{ $row->guru_bk }}" name="guru_bk" placeholder="Guru BK" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" value="{{ $row->wali_kelas }}" name="wali_kelas" placeholder="Wali Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <button type="submit" class="btn-tambah">Update Data</button> <button class="btn-back"><a href="{{ url('kelasadmin') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
