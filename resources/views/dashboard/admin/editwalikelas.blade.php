@@ -263,7 +263,7 @@
                                                 <input type="text" value="{{ $data->nip }}" name="nisn" placeholder="NISN" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
-                                                <input type="text" value="{{ $data->no_telepon }}" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $data->no_telepon }}" name="email" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $data->email }}" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">

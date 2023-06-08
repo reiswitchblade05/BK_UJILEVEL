@@ -197,7 +197,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Murid </h2>
+                                <h2 class="pageheader-title">Guru </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus
                                     vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
@@ -205,7 +205,7 @@
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Murid</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Guru</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -263,7 +263,7 @@
                                                 <input type="text" value="{{ $row->nip }}" name="nisn" placeholder="NISN" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
-                                                <input type="text" value="{{ $row->no_telepon }}" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $row->no_telepon }}" name="email" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $row->email }}" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
