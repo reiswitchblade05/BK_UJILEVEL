@@ -18,6 +18,7 @@ class MuridSeeder extends Seeder
     {
         DB::table('murid')->insert([
             'nama_siswa' => 'Rei',
+            'user_id' => '2',
             'kelas' => 'XI PPLG 1',
             'jenis_kelamin' => 'Laki-Laki',
             'nisn' => '12345',

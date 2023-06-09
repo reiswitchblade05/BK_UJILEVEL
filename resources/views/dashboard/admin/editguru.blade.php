@@ -244,12 +244,12 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Update Murid</h5>
+                                    <h5 class="card-header">Update Guru</h5>
                                     <div class="card-body">
                                         <form action="/updateguru/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="input-group mb-3">
-                                                <input type="text" value="{{ $row->nama_guru }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $row->nama_guru }}" name="nama_guru" placeholder="Nama Guru" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $row->kelas }}" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
@@ -260,10 +260,10 @@
                                                 <option value="Perempuan">Perempuan</option>
                                             </select>
                                             <div class="input-group mb-3">
-                                                <input type="text" value="{{ $row->nip }}" name="nisn" placeholder="NISN" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $row->nip }}" name="nip" placeholder="NIP" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
-                                                <input type="text" value="{{ $row->no_telepon }}" name="email" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $row->no_telepon }}" name="no_telepon" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $row->email }}" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">

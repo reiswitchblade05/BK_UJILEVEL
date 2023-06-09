@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Murid;
 use App\Models\Guru;
 use App\Models\Kelas;
 use App\Models\Walikelas;
+use Illuminate\Support\Facades\Hash;
 
 class UIController extends Controller
 {
@@ -66,7 +68,26 @@ class UIController extends Controller
 
     public function insertwalikelas(Request $request)
     {
-        Walikelas::create($request->all());
+        $data = User::create([
+            'name' => $request->nama_guru,
+            'level' => 'walikelas',
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        // dd($data->id);
+
+        $wali = new Walikelas([
+            'nama_guru' => $request->nama_guru,
+            'kelas' => $request->kelas,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'no_telepon' => $request->no_telepon,
+            'nip' => $request->nip,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+        $wali->user_id = $data->id;
+        $wali->save();
+
         return redirect()->route('walikelasadmin')->with('success', 'Data berhasil ditambahkan!');
     }
 
@@ -79,14 +100,36 @@ class UIController extends Controller
     public function updatewalikelas(Request $request, $id)
     {
         $data = Walikelas::find($id);
+        $a = User::find($data->user_id);
+        // dd($request);
+        $a->update([
+            'name' => $request->nama_guru,
+            'level' => 'walikelas',
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        // dd($data->id);
+
+        $data->update([
+            'nama_guru' => $request->nama_guru,
+            'kelas' => $request->kelas,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'no_telepon' => $request->no_telepon,
+            'nip' => $request->nip,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
         $data->update($request->all());
         return redirect()->route('walikelasadmin')->with('success', 'Data berhasil diperbarui!');
     }
 
     public function hapuswalikelas(Request $request, $id)
     {
-        $data = Walikelas::find($id);
+        $data = WaliKelas::find($id);
+        $dataa = User::find($data->user_id);
         $data->delete();
+        $dataa->delete();
         return redirect()->route('walikelasadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
@@ -103,10 +146,28 @@ class UIController extends Controller
 
     public function insertguru(Request $request)
     {
-        Guru::create($request->all());
+        $data = User::create([
+            'name' => $request->nama_guru,
+            'level' => 'guru',
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        // dd($data->id);
+
+        $guru = new Guru([
+            'nama_guru' => $request->nama_guru,
+            'kelas' => $request->kelas,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'no_telepon' => $request->no_telepon,
+            'nip' => $request->nip,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+        $guru->user_id = $data->id;
+        $guru->save();
+
         return redirect()->route('guruadmin')->with('success', 'Data berhasil ditambahkan!');
     }
-
     public function editguru($id)
     {
         $row = Guru::find($id);
@@ -116,6 +177,26 @@ class UIController extends Controller
     public function updateguru(Request $request, $id)
     {
         $row = Guru::find($id);
+        $a = User::find($row->user_id);
+        // dd($request);
+        $a->update([
+            'name' => $request->nama_guru,
+            'level' => 'guru',
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        // dd($data->id);
+
+        $row->update([
+            'nama_guru' => $request->nama_guru,
+            'kelas' => $request->kelas,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'no_telepon' => $request->no_telepon,
+            'nip' => $request->nip,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
         $row->update($request->all());
         return redirect()->route('guruadmin')->with('success', 'Data berhasil diperbarui!');
     }
@@ -123,7 +204,9 @@ class UIController extends Controller
     public function hapusguru(Request $request, $id)
     {
         $row = Guru::find($id);
+        $rowe = User::find($row->user_id);
         $row->delete();
+        $rowe->delete();
         return redirect()->route('guruadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
@@ -140,7 +223,25 @@ class UIController extends Controller
 
     public function insertmurid(Request $request)
     {
-        Murid::create($request->all());
+        $data = User::create([
+            'name' => $request->nama_siswa,
+            'level' => 'murid',
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        // dd($data->id);
+
+        $murid = new Murid([
+            'nama_siswa' => $request->nama_siswa,
+            'kelas' => $request->kelas,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'nisn' => $request->nisn,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+        $murid->user_id = $data->id;
+        $murid->save();
         return redirect()->route('muridadmin')->with('success', 'Data berhasil ditambahkan!');
     }
 
@@ -153,6 +254,26 @@ class UIController extends Controller
     public function updatemurid(Request $request, $id)
     {
         $data = Murid::find($id);
+        $a = User::find($data->user_id);
+        // dd($request);
+        $a->update([
+            'name' => $request->nama_siswa,
+            'level' => 'murid',
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        // dd($data->id);
+
+        $data->update([
+            'nama_siswa' => $request->nama_siswa,
+            'kelas' => $request->kelas,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'nisn' => $request->nisn,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
         $data->update($request->all());
         return redirect()->route('muridadmin')->with('success', 'Data berhasil diperbarui!');
     }
@@ -160,7 +281,9 @@ class UIController extends Controller
     public function hapusmurid(Request $request, $id)
     {
         $data = Murid::find($id);
+        $dataa = User::find($data->user_id);
         $data->delete();
+        $dataa->delete();
         return redirect()->route('muridadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 

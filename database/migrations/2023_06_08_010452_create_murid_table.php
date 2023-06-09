@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('murid', function (Blueprint $table) {
             $table->id()->unique();
             $table->string('nama_siswa');
+            $table->unsignedBigInteger('user_id');
             $table->string('kelas');
             $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
             $table->string('nisn');
@@ -23,6 +24,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
