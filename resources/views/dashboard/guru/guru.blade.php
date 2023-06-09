@@ -149,30 +149,30 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-column">
-              <li class="nav-divider">
-                Menu
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link active" href="{{ url('guru') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#"><i class="fas fa-users"></i>Bimbingan Sosial</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class=" fas fa-clock" style="padding-right: 3px;"></i>Peminatan Karir</a>
-              </li>
-              <li class="nav-item">
-                <form id="logout-form" action="{{ url('logout') }}" method="GET">
-                  {{ csrf_field() }}
-                  <button class="nav-link" type="submit" style="background: #241f68; text-align:left; width: 240px; border:none; margin-top:2.5vw;"><i class="fas fa-arrow-left" style="padding-left: 2px; padding-right: 3px;"></i>Logout</button>
-                </form>
-              </li>
+            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="{{ url('guru') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('jadwalguru') }}"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('bimbinganpribadi') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ url('bimbingansosial') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('peminatankarir') }}"><i class=" fas fa-clock" style="padding-right: 3px;"></i>Peminatan Karir</a>
+                            </li>
+                            <li class="nav-item">
+                                <form id="logout-form" action="{{ url('logout') }}" method="GET">
+                                    {{ csrf_field() }}
+                                    <button class="nav-link" type="submit" style="background: #241f68; text-align:left; width: 240px; border:none; margin-top:2.5vw;"><i class="fas fa-arrow-left" style="padding-left: 2px; padding-right: 3px;"></i>Logout</button>
+                                </form>
+                            </li>
             </ul>
           </div>
         </nav>
