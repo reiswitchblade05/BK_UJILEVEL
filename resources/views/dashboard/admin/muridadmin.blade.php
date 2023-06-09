@@ -268,6 +268,7 @@
                                                         <th>Nama Murid</th>
                                                         <th>Kelas</th>
                                                         <th>Jenis Kelamin</th>
+                                                        <th>NISN</th>
                                                         <th>Misc.</th>
                                                     </tr>
                                                 </thead>
@@ -281,6 +282,7 @@
                                                         <td>{{ $row->nama_siswa }}</td>
                                                         <td>{{ $row->kelas }}</td>
                                                         <td>{{ $row->jenis_kelamin }}</td>
+                                                        <td>{{ $row->nisn }}</td>
                                                         <td>
                                                             <button class="btn-edit"><a href="/editmurid/{{ $row->id }}" style="color: #fff;">Edit</a></button>
                                                             <button class="btn-delete"><a href="/hapusmurid/{{ $row->id }}" style="color: #fff;">Delete</a></button>
