@@ -287,11 +287,6 @@ class UIController extends Controller
         return redirect()->route('muridadmin')->with('success', 'Data berhasil dihapuskan!');
     }
 
-    public function guru()
-    {
-        return view('dashboard.guru.guru');
-    }
-
     public function walikelas()
     {
         return view('dashboard.walikelas.walikelas');
