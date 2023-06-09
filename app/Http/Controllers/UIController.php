@@ -20,12 +20,14 @@ class UIController extends Controller
 
     public function kelasadmin()
     {
-        $row = Kelas::all();
+        $row = Kelas::with('guru', 'waliKelas')->get();
+        // dd($row);
         return view('dashboard.admin.kelasadmin', compact('row'));
     }
 
     public function tambahkelas()
     {
+
         return view('dashboard.admin.tambahkelas');
     }
 
@@ -63,7 +65,8 @@ class UIController extends Controller
 
     public function tambahwalikelas()
     {
-        return view('dashboard.admin.tambahwalikelas');
+        $data = Kelas::all();
+        return view('dashboard.admin.tambahwalikelas', compact('data'));
     }
 
     public function insertwalikelas(Request $request)
@@ -93,8 +96,9 @@ class UIController extends Controller
 
     public function editwalikelas($id)
     {
+        $dataa = Kelas::all();
         $data = Walikelas::find($id);
-        return view('dashboard.admin.editwalikelas', compact('data'));
+        return view('dashboard.admin.editwalikelas', compact('dataa', 'data'));
     }
 
     public function updatewalikelas(Request $request, $id)
@@ -141,7 +145,8 @@ class UIController extends Controller
 
     public function tambahguru()
     {
-        return view('dashboard.admin.tambahguru');
+        $row = Kelas::all();
+        return view('dashboard.admin.tambahguru', compact('row'));
     }
 
     public function insertguru(Request $request)
@@ -170,8 +175,9 @@ class UIController extends Controller
     }
     public function editguru($id)
     {
+        $rowe = Kelas::all();
         $row = Guru::find($id);
-        return view('dashboard.admin.editguru', compact('row'));
+        return view('dashboard.admin.editguru', compact('rowe', 'row'));
     }
 
     public function updateguru(Request $request, $id)
@@ -218,7 +224,8 @@ class UIController extends Controller
 
     public function tambahmurid()
     {
-        return view('dashboard.admin.tambahmurid');
+        $data = Kelas::all();
+        return view('dashboard.admin.tambahmurid', compact('data'));
     }
 
     public function insertmurid(Request $request)
@@ -247,8 +254,9 @@ class UIController extends Controller
 
     public function editmurid($id)
     {
+        $dataa = Kelas::all();
         $data = Murid::find($id);
-        return view('dashboard.admin.editmurid', compact('data'));
+        return view('dashboard.admin.editmurid', compact('dataa', 'data'));
     }
 
     public function updatemurid(Request $request, $id)

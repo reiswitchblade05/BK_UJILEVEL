@@ -164,6 +164,9 @@
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('bimbingansosial') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ url('petakerawanan') }}"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('peminatankarir') }}"><i class=" fas fa-clock" style="padding-right: 3px;"></i>Peminatan Karir</a>
                             </li>

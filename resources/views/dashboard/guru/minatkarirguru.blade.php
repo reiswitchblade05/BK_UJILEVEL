@@ -164,6 +164,9 @@
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('bimbingansosial') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ url('petakerawanan') }}"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ url('peminatankarir') }}"><i class=" fas fa-clock" style="padding-right: 3px;"></i>Peminatan Karir</a>
                             </li>
@@ -193,13 +196,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Bimbingan Sosial </h2>
+                                <h2 class="pageheader-title">Peminatan Karir </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Guru BK</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Bimbingan Sosial</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Peminatan Karir</li>
                                         </ol>
                                     </nav>
                                 </div>
