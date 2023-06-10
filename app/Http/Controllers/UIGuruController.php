@@ -31,8 +31,8 @@ class UIGuruController extends Controller
         return view('dashboard.guru.petakerawanan');
     }
 
-    public function minatkarirguru()
+    public function bimpelajar()
     {
-        return view('dashboard.guru.minatkarirguru');
+        return view('dashboard.guru.bimpelajar');
     }
 }
