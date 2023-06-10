@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UIController;
 use App\Http\Controllers\UIGuruController;
+use App\Http\Controllers\UIMuridController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,10 +71,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     Route::get('/guru', [UIGuruController::class, 'guru'])->name('guru');
     Route::get('/jadwalguru', [UIGuruController::class, 'jadwalguru'])->name('jadwalguru');
+
+    //Bimbingan Pribadi Pages
     Route::get('/bimbinganpribadi', [UIGuruController::class, 'bimpribadi'])->name('bimpribadi');
-    Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
-    Route::get('/petakerawanan', [UIGuruController::class, 'petakerawanan'])->name('petakerawanan');
-    Route::get('/bimbinganpelajar', [UIGuruController::class, 'bimpelajar'])->name('bimpelajar');
     Route::get('/tambahbimpribadi', [UIGuruController::class, 'tambahbimpribadi'])->name('tambahbimpribadi');
     Route::get('/editbimpribadi/{id}', [UIGuruController::class, 'editbimpribadi'])->name('editbimpribadi');
     Route::post('/updatebimpribadi/{id}', [UIGuruController::class, 'updatebimpribadi'])->name('updatebimpribadi');
@@ -81,6 +81,10 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     Route::post('/insertbimpribadi', [UIGuruController::class, 'insertbimpribadi'])->name('insertbimpribadi');
     Route::post('/inserthasilpribadi/{id}', [UIGuruController::class, 'inserthasilpribadi'])->name('inserthasilpribadi');
     Route::get('/hapusbimpribadi/{id}', [UIGuruController::class, 'hapusbimpribadi'])->name('hapusbimpribadi');
+
+    Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
+    Route::get('/petakerawanan', [UIGuruController::class, 'petakerawanan'])->name('petakerawanan');
+    Route::get('/bimbinganpelajar', [UIGuruController::class, 'bimpelajar'])->name('bimpelajar');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
@@ -88,5 +92,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:murid']], function () {
-    Route::get('/murid', [UIController::class, 'murid'])->name('murid');
+    Route::get('/murid', [UIMuridController::class, 'murid'])->name('murid');
+    Route::get('/bimpribadisiswa', [UIMuridController::class, 'bimpribadisiswa'])->name('bimpribadisiswa');
+    Route::get('/tambahbimpribadisiswa', [UIMuridController::class, 'tambahbimpribadisiswa'])->name('tambahbimpribadisiswa');
+    Route::post('/insertbimpribadisiswa', [UIMuridController::class, 'insertbimpribadisiswa'])->name('insertbimpribadisiswa');
 });

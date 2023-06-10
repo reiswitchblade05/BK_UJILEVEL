@@ -299,9 +299,4 @@ class UIController extends Controller
     {
         return view('dashboard.walikelas.walikelas');
     }
-
-    public function murid()
-    {
-        return view('dashboard.murid.murid');
-    }
 }

@@ -20,12 +20,12 @@ class UIGuruController extends Controller
     public function bimpribadi()
     {
         $data = BimbinganPribadi::all();
-        return view('dashboard.guru.bimpribadi', compact('data'));
+        return view('dashboard.guru.bimbinganpribadi.bimpribadi', compact('data'));
     }
 
     public function tambahbimpribadi()
     {
-        return view('dashboard.guru.tambahbimpribadi');
+        return view('dashboard.guru.bimbinganpribadi.tambahbimpribadi');
     }
 
     public function insertbimpribadi(Request $request)
@@ -37,7 +37,7 @@ class UIGuruController extends Controller
     public function tambahhasilpribadi($id)
     {
         $data = BimbinganPribadi::find($id);
-        return view('dashboard.guru.hasilbimpribadi', compact('data'));
+        return view('dashboard.guru.bimbinganpribadi.hasilbimpribadi', compact('data'));
     }
 
     public function inserthasilpribadi(Request $request, $id)
@@ -54,7 +54,7 @@ class UIGuruController extends Controller
     public function editbimpribadi($id)
     {
         $data = BimbinganPribadi::find($id);
-        return view('dashboard.guru.editbimpribadi', compact('data'));
+        return view('dashboard.guru.bimbinganpribadi.editbimpribadi', compact('data'));
     }
 
     public function updatebimpribadi(Request $request, $id)
