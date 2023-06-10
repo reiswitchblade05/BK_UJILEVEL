@@ -19,8 +19,9 @@ return new class extends Migration
             $table->integer('nipd');
             $table->string('tema_konseling');
             $table->dateTime('jadwal_konseling', $precision = 0);
-            $table->string('isi_konseling');
-            $table->string('tidak_lanjut');
+            $table->enum('status', ['Diproses', 'Diterima']);
+            $table->string('hasil')->nullable();
+            $table->string('tindak_lanjut')->nullable();
 
             $table->timestamps();
         });

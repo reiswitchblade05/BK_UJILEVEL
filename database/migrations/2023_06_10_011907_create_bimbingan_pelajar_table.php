@@ -18,7 +18,10 @@ return new class extends Migration
             $table->string('nama_siswa');
             $table->string('kelas');
             $table->string('konflik');
-            $table->string('tindak_lanjut');
+            $table->dateTime('jadwal_siswa', $precision = 0);
+            $table->enum('status', ['Diproses', 'Diterima']);
+            $table->string('hasil')->nullable();
+            $table->string('tindak_lanjut')->nullable();
             $table->timestamps();
         });
     }
