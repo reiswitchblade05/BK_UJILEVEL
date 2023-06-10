@@ -163,7 +163,7 @@
                                 <a class="nav-link" href="{{ url('kelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Kelas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('walikelasadmin') }}" ><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
+                                <a class="nav-link" href="{{ url('walikelasadmin') }}"><i class="fas fa-fw fa-chart-pie"></i>Wali Kelas</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
@@ -268,6 +268,7 @@
                                                         <th>Nama Murid</th>
                                                         <th>Kelas</th>
                                                         <th>Jenis Kelamin</th>
+                                                        <th>NISN</th>
                                                         <th>Misc.</th>
                                                     </tr>
                                                 </thead>
@@ -281,6 +282,7 @@
                                                         <td>{{ $row->nama_siswa }}</td>
                                                         <td>{{ $row->kelas }}</td>
                                                         <td>{{ $row->jenis_kelamin }}</td>
+                                                        <td>{{ $row->nisn }}</td>
                                                         <td>
                                                             <button class="btn-edit"><a href="/editmurid/{{ $row->id }}" style="color: #fff;">Edit</a></button>
                                                             <button class="btn-delete"><a href="/hapusmurid/{{ $row->id }}" style="color: #fff;">Delete</a></button>

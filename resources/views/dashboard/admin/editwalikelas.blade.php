@@ -249,21 +249,24 @@
                                         <form action="/updatewalikelas/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->nama_guru }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $data->nama_guru }}" name="nama_guru" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->kelas }}" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                            </div>
+                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                            <option selected >Kelas</option>
+                                            @foreach($dataa as $kelas)
+                                                <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
+                                            @endforeach
+                                            </select>
                                             <select name="jenis_kelamin" class="form-select w-100 p-2 mb-3" value="{{ $data->jenis_kelamin }}" aria-label="Default select example">
                                                 <option selected>Jenis Kelamin</option>
                                                 <option value="Laki-Laki">Laki-Laki</option>
                                                 <option value="Perempuan">Perempuan</option>
                                             </select>
                                             <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->nip }}" name="nisn" placeholder="NISN" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $data->nip }}" name="nip" placeholder="NIP" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
-                                                <input type="text" value="{{ $data->no_telepon }}" name="email" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $data->no_telepon }}" name="no_telepon" placeholder="Nomor Telepon" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $data->email }}" name="email" placeholder="Email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">

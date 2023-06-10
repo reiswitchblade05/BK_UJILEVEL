@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UIController;
+use App\Http\Controllers\UIGuruController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +68,12 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
-    Route::get('/guru', [UIController::class, 'guru'])->name('guru');
+    Route::get('/guru', [UIGuruController::class, 'guru'])->name('guru');
+    Route::get('/jadwalguru', [UIGuruController::class, 'jadwalguru'])->name('jadwalguru');
+    Route::get('/bimbinganpribadi', [UIGuruController::class, 'bimpribadi'])->name('bimpribadi');
+    Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
+    Route::get('/petakerawanan', [UIGuruController::class, 'petakerawanan'])->name('petakerawanan');
+    Route::get('/peminatankarir', [UIGuruController::class, 'minatkarirguru'])->name('minatkarirguru');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {

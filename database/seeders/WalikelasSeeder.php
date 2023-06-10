@@ -17,12 +17,13 @@ class WalikelasSeeder extends Seeder
     public function run()
     {
         DB::table('walikelas')->insert([
-            'nama_guru' => 'Bu Aniek',
+            'nama_guru' => 'Pak Erraldo',
+            'user_id' => '3',
             'kelas' => 'XI PPLG 1',
-            'jenis_kelamin' => 'Perempuan',
+            'jenis_kelamin' => 'Laki-Laki',
             'no_telepon' => '12345',
             'nip' => '666',
-            'email' => 'ani@gmail.com',
+            'email' => 'walikelas@gmail.com',
             'password' => Hash::make(123),
         ]);
     }
