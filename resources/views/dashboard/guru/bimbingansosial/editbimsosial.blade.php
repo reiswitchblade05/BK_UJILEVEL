@@ -149,7 +149,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
-                        <li class="nav-divider">
+                            <li class="nav-divider">
                                 Menu
                             </li>
                             <li class="nav-item ">
@@ -243,66 +243,66 @@
                                 <div class="card">
                                     <h5 class="card-header">Update Bimbingan Sosial</h5>
                                     <div class="card-body">
-                                    <form action="/updatebimsosial/{{ $data->id }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="input-group mb-3">
-                                            <input type="text" value="{{ $data->nama_siswa }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" value="{{ $data->kelas }}" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <input name="jadwal_siswa" value="{{ $data->jadwal_siswa }}" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
-                                        <div class="input-group mb-3">
-                                            <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <select name="status" value="{{ $data->status }}" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected>Status</option>
-                                            <option value="Diproses">Diproses</option>
-                                        </select>
-                                        <button type="submit" class="btn-tambah">Update Data</button> <button class="btn-back"><a href="{{ url('bimbingansosial') }}" style="color: #fff;">Kembali</a></button>
-                                    </form>
+                                        <form action="/updatebimsosial/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" value="{{ $data->nama_siswa }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" value="{{ $data->kelas }}" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                                            </div>
+                                            <input name="jadwal_siswa" value="{{ $data->jadwal_siswa }}" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                            <div class="input-group mb-3">
+                                                <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <select name="status" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
+                                                <option selected>{{ $data->status }}</option>
+                                                <option value="Diproses">Diproses</option>
+                                            </select>
+                                            <button type="submit" class="btn-tambah">Update Data</button> <button class="btn-back"><a href="{{ url('bimbingansosial') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div style="padding-bottom: 20vw;">
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
+                </div style="padding-bottom: 20vw;">
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
 
+                <!-- ============================================================== -->
+                <!-- end footer -->
+                <!-- ============================================================== -->
+            </div>
             <!-- ============================================================== -->
-            <!-- end footer -->
+            <!-- end wrapper  -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- end wrapper  -->
+        <!-- end main wrapper  -->
         <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    <script src="assets-guru/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="assets-guru/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="assets-guru/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="assets-guru/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="assets-guru/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="assets-guru/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="assets-guru/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="assets-guru/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="assets-guru/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="assets-guru/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets-guru/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets-guru/libs/js/dashboard-ecommerce.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jquery 3.3.1 -->
+        <script src="assets-guru/vendor/jquery/jquery-3.3.1.min.js"></script>
+        <!-- bootstap bundle js -->
+        <script src="assets-guru/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+        <!-- slimscroll js -->
+        <script src="assets-guru/vendor/slimscroll/jquery.slimscroll.js"></script>
+        <!-- main js -->
+        <script src="assets-guru/libs/js/main-js.js"></script>
+        <!-- chart chartist js -->
+        <script src="assets-guru/vendor/charts/chartist-bundle/chartist.min.js"></script>
+        <!-- sparkline js -->
+        <script src="assets-guru/vendor/charts/sparkline/jquery.sparkline.js"></script>
+        <!-- morris js -->
+        <script src="assets-guru/vendor/charts/morris-bundle/raphael.min.js"></script>
+        <script src="assets-guru/vendor/charts/morris-bundle/morris.js"></script>
+        <!-- chart c3 js -->
+        <script src="assets-guru/vendor/charts/c3charts/c3.min.js"></script>
+        <script src="assets-guru/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+        <script src="assets-guru/vendor/charts/c3charts/C3chartjs.js"></script>
+        <script src="assets-guru/libs/js/dashboard-ecommerce.js"></script>
 </body>
 
 </html>

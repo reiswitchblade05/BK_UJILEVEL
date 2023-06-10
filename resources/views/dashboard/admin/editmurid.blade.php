@@ -252,13 +252,13 @@
                                                 <input type="text" value="{{ $data->nama_siswa }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
                                             <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected >Kelas</option>
-                                            @foreach($dataa as $kelas)
+                                                <option selected>{{ $data->kelas }}</option>
+                                                @foreach($dataa as $kelas)
                                                 <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
-                                            @endforeach
+                                                @endforeach
                                             </select>
-                                            <select name="jenis_kelamin" class="form-select w-100 p-2 mb-3" value="{{ $data->jenis_kelamin }}" aria-label="Default select example">
-                                                <option selected>Jenis Kelamin</option>
+                                            <select name="jenis_kelamin" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>{{ $data->jenis_kelamin }}</option>
                                                 <option value="Laki-Laki">Laki-Laki</option>
                                                 <option value="Perempuan">Perempuan</option>
                                             </select>

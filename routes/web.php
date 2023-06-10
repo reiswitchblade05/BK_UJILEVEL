@@ -75,11 +75,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
 
     //Bimbingan Pribadi Pages
     Route::get('/bimbinganpribadi', [UIGuruController::class, 'bimpribadi'])->name('bimpribadi');
-    Route::get('/tambahbimpribadi', [UIGuruController::class, 'tambahbimpribadi'])->name('tambahbimpribadi');
     Route::get('/editbimpribadi/{id}', [UIGuruController::class, 'editbimpribadi'])->name('editbimpribadi');
     Route::post('/updatebimpribadi/{id}', [UIGuruController::class, 'updatebimpribadi'])->name('updatebimpribadi');
     Route::get('/tambahhasilpribadi/{id}', [UIGuruController::class, 'tambahhasilpribadi'])->name('tambahhasilpribadi');
-    Route::post('/insertbimpribadi', [UIGuruController::class, 'insertbimpribadi'])->name('insertbimpribadi');
     Route::post('/inserthasilpribadi/{id}', [UIGuruController::class, 'inserthasilpribadi'])->name('inserthasilpribadi');
     Route::get('/hapusbimpribadi/{id}', [UIGuruController::class, 'hapusbimpribadi'])->name('hapusbimpribadi');
 

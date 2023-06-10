@@ -78,17 +78,6 @@ class UIGuruController extends Controller
         return view('dashboard.guru.bimbingansosial.bimsosial', compact('data'));
     }
 
-    public function tambahbimsosial()
-    {
-        return view('dashboard.guru.bimbingansosial.tambahbimsosial');
-    }
-
-    public function insertbimsosial(Request $request)
-    {
-        BimbinganSosial::create($request->all());
-        return redirect()->route('bimsosial')->with('success', 'Data berhasil ditambahkan!');
-    }
-
     public function editbimsosial($id)
     {
         $data = BimbinganSosial::find($id);
