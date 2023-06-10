@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UIController;
 use App\Http\Controllers\UIGuruController;
 use App\Http\Controllers\UIMuridController;
+use App\Http\Controllers\UIWaliKelasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +89,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
-    route::get('/walikelas', [UIController::class, 'walikelas'])->name('walikelas');
+    route::get('/walikelas', [UIWaliKelasController::class, 'walikelas'])->name('walikelas');
+    route::get('/bimpribadiwali', [UIWaliKelasController::class, 'bimpribadiwali'])->name('bimpribadiwali');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:murid']], function () {

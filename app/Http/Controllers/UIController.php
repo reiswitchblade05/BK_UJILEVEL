@@ -294,9 +294,4 @@ class UIController extends Controller
         $dataa->delete();
         return redirect()->route('muridadmin')->with('success', 'Data berhasil dihapuskan!');
     }
-
-    public function walikelas()
-    {
-        return view('dashboard.walikelas.walikelas');
-    }
 }
