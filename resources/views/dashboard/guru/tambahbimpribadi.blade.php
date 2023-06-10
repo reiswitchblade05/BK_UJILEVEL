@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="dashboard.html"><img src="{{asset('assets-guru/images/logo.png')}}" alt="" style="width: 135px;"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="assets-guru/images/logo.png" alt="" style="width: 135px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +48,7 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-22.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-22.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -56,7 +56,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-33.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-33.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
@@ -64,7 +64,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-44.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-44.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -72,7 +72,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-55.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-55.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -119,7 +119,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets-guru/images/avatar-admin.jpg')}}" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets-guru/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Guru</h5>
@@ -149,7 +149,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
+                        <li class="nav-divider">
                                 Menu
                             </li>
                             <li class="nav-item ">
@@ -220,47 +220,20 @@
                                     border-radius: 7px;
                                     padding: 7px;
                                     margin-bottom: 1.4vw;
-                                    width: 96px;
+                                    width: 110px;
                                     border: none;
                                     color: #fff;
                                     background-color: #1d3988;
                                 }
 
-                                .btn-edit {
+                                .btn-back {
                                     border-radius: 7px;
                                     padding: 7px;
                                     border: none;
-                                    width: 50px;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
                                     color: #fff;
                                     background-color: #1d3988;
-                                }
-
-                                .btn-input {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 55px;
-                                    color: #fff;
-                                    background-color: #f27f0c;
-                                }
-
-                                .btn-delete {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 66px;
-                                    color: #fff;
-                                    background-color: #d00f0f;
-                                }
-
-                                .Diterima {
-                                    color: #fff;
-                                    background-color: green;
-                                }
-
-                                .Diproses {
-                                    color: #fff;
-                                    background-color: #ff6600;
                                 }
                             </style>
                             <!-- ============================================================== -->
@@ -268,57 +241,31 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Murid</h5>
-                                    @if ($message = Session::get('success'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @endif
+                                    <h5 class="card-header">Insert Bimbingan Pribadi</h5>
                                     <div class="card-body">
-                                        <button class="btn-tambah"> <a href="{{ url('tambahbimpribadi') }}" style="color: #fff;">Tambah</a> </button>
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-bordered first">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No.</th>
-                                                        <th>Nama Murid</th>
-                                                        <th>Tema</th>
-                                                        <th>Jadwal</th>
-                                                        <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
-                                                        <th>Misc.</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @php
-                                                    $no = 1;
-                                                    @endphp
-                                                    @foreach ($data as $row)
-                                                    <tr>
-                                                        <td>{{ $no++ }}</td>
-                                                        <td>{{ $row->nama_siswa }}</td>
-                                                        <td>{{ $row->tema_konseling }}</td>
-                                                        <td>{{ $row->jadwal_konseling }}</td>
-                                                        <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
-                                                        <td>
-                                                            <button class="btn-edit"><a href="/editbimpribadi/{{ $row->id }}" style="color: #fff;">Edit</a></button>
-                                                            <button class="btn-input"><a href="/tambahhasilpribadi/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
-                                                            <button class="btn-delete"><a href="/hapusbimpribadi/{{ $row->id }}" style="color: #fff;">Delete</a></button>
-                                                        </td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
+                                    <form action="{{ url('insertbimpribadi') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                         </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="nipd" placeholder="NIPD" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <input name="jadwal_konseling" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                        <select name="status" class="form-select w-100 p-2 mb-3 mt-3" aria-label="Default select example">
+                                            <option selected>Status</option>
+                                            <option value="Diproses">Diproses</option>
+                                        </select>
+                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimbinganpribadi') }}" style="color: #fff;">Kembali</a></button>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div style="padding-bottom: 20vw;">
             <!-- ============================================================== -->
             <!-- footer -->

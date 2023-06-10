@@ -149,7 +149,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
+                        <li class="nav-divider">
                                 Menu
                             </li>
                             <li class="nav-item ">
@@ -220,47 +220,20 @@
                                     border-radius: 7px;
                                     padding: 7px;
                                     margin-bottom: 1.4vw;
-                                    width: 96px;
+                                    width: 110px;
                                     border: none;
                                     color: #fff;
                                     background-color: #1d3988;
                                 }
 
-                                .btn-edit {
+                                .btn-back {
                                     border-radius: 7px;
                                     padding: 7px;
                                     border: none;
-                                    width: 50px;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
                                     color: #fff;
                                     background-color: #1d3988;
-                                }
-
-                                .btn-input {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 55px;
-                                    color: #fff;
-                                    background-color: #f27f0c;
-                                }
-
-                                .btn-delete {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 66px;
-                                    color: #fff;
-                                    background-color: #d00f0f;
-                                }
-
-                                .Diterima {
-                                    color: #fff;
-                                    background-color: green;
-                                }
-
-                                .Diproses {
-                                    color: #fff;
-                                    background-color: #ff6600;
                                 }
                             </style>
                             <!-- ============================================================== -->
@@ -268,57 +241,23 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Murid</h5>
-                                    @if ($message = Session::get('success'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @endif
+                                    <h5 class="card-header">Insert Hasil Bimbingan Pribadi</h5>
                                     <div class="card-body">
-                                        <button class="btn-tambah"> <a href="{{ url('tambahbimpribadi') }}" style="color: #fff;">Tambah</a> </button>
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-bordered first">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No.</th>
-                                                        <th>Nama Murid</th>
-                                                        <th>Tema</th>
-                                                        <th>Jadwal</th>
-                                                        <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
-                                                        <th>Misc.</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @php
-                                                    $no = 1;
-                                                    @endphp
-                                                    @foreach ($data as $row)
-                                                    <tr>
-                                                        <td>{{ $no++ }}</td>
-                                                        <td>{{ $row->nama_siswa }}</td>
-                                                        <td>{{ $row->tema_konseling }}</td>
-                                                        <td>{{ $row->jadwal_konseling }}</td>
-                                                        <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
-                                                        <td>
-                                                            <button class="btn-edit"><a href="/editbimpribadi/{{ $row->id }}" style="color: #fff;">Edit</a></button>
-                                                            <button class="btn-input"><a href="/tambahhasilpribadi/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
-                                                            <button class="btn-delete"><a href="/hapusbimpribadi/{{ $row->id }}" style="color: #fff;">Delete</a></button>
-                                                        </td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
+                                    <form action="/inserthasilpribadi/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="hasil" placeholder="Hasil" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                         </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimbinganpribadi') }}" style="color: #fff;">Kembali</a></button>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div style="padding-bottom: 20vw;">
             <!-- ============================================================== -->
             <!-- footer -->
