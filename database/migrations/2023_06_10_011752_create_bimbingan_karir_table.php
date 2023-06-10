@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('bimbingan_karir', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('jadwal_sosialisasi', $precision = 0);
-            $table->dateTime('jadwal_bimbingan_karir_siswa', $precision = 0);
+            $table->string('nama_siswa');
+            $table->dateTime('jadwal', $precision = 0);
             $table->string('nama_sosialisasi');
             $table->unsignedBigInteger('karir_id');
             $table->string('alasan_siswa');

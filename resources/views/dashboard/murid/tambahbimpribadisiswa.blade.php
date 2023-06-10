@@ -153,13 +153,13 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('bimpribadisiswa') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
+                                <a class="nav-link active" href="{{ url('bimpribadisiswa') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#"><i class="fas fa-users"></i>Bimbingan Sosial</a>
@@ -214,7 +214,7 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                    <div class="row">
+                        <div class="row">
                             <style>
                                 .btn-tambah {
                                     border-radius: 7px;
@@ -243,24 +243,24 @@
                                 <div class="card">
                                     <h5 class="card-header">Insert Bimbingan Pribadi</h5>
                                     <div class="card-body">
-                                    <form action="{{ url('insertbimpribadisiswa') }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="nipd" placeholder="NIPD" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <input name="jadwal_konseling" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
-                                        <select name="status" class="form-select w-100 p-2 mb-3 mt-3" aria-label="Default select example">
-                                            <option selected>Status</option>
-                                            <option value="Diproses">Diproses</option>
-                                        </select>
-                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimpribadisiswa') }}" style="color: #fff;">Kembali</a></button>
-                                    </form>
+                                        <form action="{{ url('insertbimpribadisiswa') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="nipd" placeholder="NIPD" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <input name="jadwal_konseling" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                            <select name="status" class="form-select w-100 p-2 mb-3 mt-3" aria-label="Default select example">
+                                                <option selected>Status</option>
+                                                <option value="Diproses">Diproses</option>
+                                            </select>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimpribadisiswa') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

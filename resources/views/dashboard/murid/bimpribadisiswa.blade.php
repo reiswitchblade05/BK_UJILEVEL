@@ -153,13 +153,13 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('bimpribadisiswa') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
+                                <a class="nav-link active" href="{{ url('bimpribadisiswa') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#"><i class="fas fa-users"></i>Bimbingan Sosial</a>
