@@ -83,7 +83,16 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     Route::post('/inserthasilpribadi/{id}', [UIGuruController::class, 'inserthasilpribadi'])->name('inserthasilpribadi');
     Route::get('/hapusbimpribadi/{id}', [UIGuruController::class, 'hapusbimpribadi'])->name('hapusbimpribadi');
 
+    //Bimbingan Sosial Pages
     Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
+    Route::get('/tambahbimsosial', [UIGuruController::class, 'tambahbimsosial'])->name('tambahbimsosial');
+    Route::post('/insertbimsosial', [UIGuruController::class, 'insertbimsosial'])->name('insertbimsosial');
+    Route::get('/editbimsosial/{id}', [UIGuruController::class, 'editbimsosial'])->name('editbimsosial');
+    Route::post('/updatebimsosial/{id}', [UIGuruController::class, 'updatebimsosial'])->name('updatebimsosial');
+    Route::get('/tambahhasilsosial/{id}', [UIGuruController::class, 'tambahhasilsosial'])->name('tambahhasilsosial');
+    Route::post('/inserthasilsosial/{id}', [UIGuruController::class, 'inserthasilsosial'])->name('inserthasilsosial');
+    Route::get('/hapusbimsosial/{id}', [UIGuruController::class, 'hapusbimsosial'])->name('hapusbimsosial');
+
     Route::get('/petakerawanan', [UIGuruController::class, 'petakerawanan'])->name('petakerawanan');
     Route::get('/bimbinganpelajar', [UIGuruController::class, 'bimpelajar'])->name('bimpelajar');
 });

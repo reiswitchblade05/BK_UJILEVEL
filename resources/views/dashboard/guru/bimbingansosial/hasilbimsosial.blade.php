@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="dashboard.html"><img src="assets-guru/images/logo.png" alt="" style="width: 135px;"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="{{asset('assets-guru/images/logo.png')}}" alt="" style="width: 135px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +48,7 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-22.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-22.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -56,7 +56,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-33.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-33.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
@@ -64,7 +64,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-44.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-44.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -72,7 +72,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-guru/images/avatar-55.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-55.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -119,7 +119,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets-guru/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets-guru/images/avatar-admin.jpg')}}" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Guru</h5>
@@ -196,13 +196,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Bimbingan Sosial </h2>
+                                <h2 class="pageheader-title">Bimbingan Pribadi </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Guru BK</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Bimbingan Sosial</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Bimbingan Pribadi</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -214,46 +214,87 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
+                        <div class="row">
+                            <style>
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 110px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
 
+                                .btn-back {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+                            </style>
+                            <!-- ============================================================== -->
+                            <!-- basic table  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Insert Hasil Bimbingan Sosial</h5>
+                                    <div class="card-body">
+                                        <form action="/inserthasilsosial/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="hasil" placeholder="Hasil" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimbinganpribadi') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div style="padding-bottom: 20vw;">
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
+                </div style="padding-bottom: 20vw;">
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
 
+                <!-- ============================================================== -->
+                <!-- end footer -->
+                <!-- ============================================================== -->
+            </div>
             <!-- ============================================================== -->
-            <!-- end footer -->
+            <!-- end wrapper  -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- end wrapper  -->
+        <!-- end main wrapper  -->
         <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    <script src="assets-guru/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="assets-guru/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="assets-guru/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="assets-guru/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="assets-guru/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="assets-guru/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="assets-guru/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="assets-guru/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="assets-guru/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="assets-guru/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets-guru/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets-guru/libs/js/dashboard-ecommerce.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jquery 3.3.1 -->
+        <script src="assets-guru/vendor/jquery/jquery-3.3.1.min.js"></script>
+        <!-- bootstap bundle js -->
+        <script src="assets-guru/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+        <!-- slimscroll js -->
+        <script src="assets-guru/vendor/slimscroll/jquery.slimscroll.js"></script>
+        <!-- main js -->
+        <script src="assets-guru/libs/js/main-js.js"></script>
+        <!-- chart chartist js -->
+        <script src="assets-guru/vendor/charts/chartist-bundle/chartist.min.js"></script>
+        <!-- sparkline js -->
+        <script src="assets-guru/vendor/charts/sparkline/jquery.sparkline.js"></script>
+        <!-- morris js -->
+        <script src="assets-guru/vendor/charts/morris-bundle/raphael.min.js"></script>
+        <script src="assets-guru/vendor/charts/morris-bundle/morris.js"></script>
+        <!-- chart c3 js -->
+        <script src="assets-guru/vendor/charts/c3charts/c3.min.js"></script>
+        <script src="assets-guru/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+        <script src="assets-guru/vendor/charts/c3charts/C3chartjs.js"></script>
+        <script src="assets-guru/libs/js/dashboard-ecommerce.js"></script>
 </body>
 
 </html>
