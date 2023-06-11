@@ -216,16 +216,6 @@
 
                         <div class="row">
                             <style>
-                                .btn-tambah {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    margin-bottom: 1.4vw;
-                                    width: 96px;
-                                    border: none;
-                                    color: #fff;
-                                    background-color: #1d3988;
-                                }
-
                                 .btn-edit {
                                     border-radius: 7px;
                                     padding: 7px;

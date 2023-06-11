@@ -21,7 +21,6 @@ class UIController extends Controller
     public function kelasadmin()
     {
         $row = Kelas::with('guru', 'waliKelas')->get();
-        // dd($row);
         return view('dashboard.admin.kelasadmin', compact('row'));
     }
 

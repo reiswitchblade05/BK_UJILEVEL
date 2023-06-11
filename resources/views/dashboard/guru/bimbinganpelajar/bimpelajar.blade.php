@@ -214,7 +214,100 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
+                        <div class="row">
+                            <style>
+                                .btn-edit {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
 
+                                .btn-input {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 55px;
+                                    color: #fff;
+                                    background-color: #f27f0c;
+                                }
+
+                                .btn-delete {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 66px;
+                                    color: #fff;
+                                    background-color: #d00f0f;
+                                }
+
+                                .Selesai {
+                                    color: #fff;
+                                    background-color: green;
+                                }
+
+                                .Diproses {
+                                    color: #fff;
+                                    background-color: #ff6600;
+                                }
+                            </style>
+                            <!-- ============================================================== -->
+                            <!-- basic table  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Tabel Bimbingan Pribadi</h5>
+                                    @if ($message = Session::get('success'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @endif
+                                    <div class="card-body">
+                                        <!-- <button class="btn-tambah"> <a href="{{ url('tambahbimpribadi') }}" style="color: #fff;">Tambah</a> </button> -->
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered first">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Nama Murid</th>
+                                                        <th>Tema</th>
+                                                        <th>Jadwal</th>
+                                                        <th>Status</th>
+                                                        <th>Hasil</th>
+                                                        <th>Tindak Lanjut</th>
+                                                        <th>Misc.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @php
+                                                    $no = 1;
+                                                    @endphp
+                                                    @foreach ($data as $row)
+                                                    <tr>
+                                                        <td>{{ $no++ }}</td>
+                                                        <td>{{ $row->nama_siswa }}</td>
+                                                        <td>{{ $row->kelas }}</td>
+                                                        <td>{{ $row->tema }}</td>
+                                                        <td>{{ $row->jadwal_siswa }}</td>
+                                                        <td class="{{ $row->status }}">{{ $row->status }}</td>
+                                                        <td>{{ $row->hasil }}</td>
+                                                        <td>{{ $row->tindak_lanjut }}</td>
+                                                        <td>
+                                                            <button class="btn-edit"><a href="#" style="color: #fff;">Edit</a></button>
+                                                            <button class="btn-input"><a href="#" style="color: #fff;">Hasil</a></button>
+                                                            <button class="btn-delete"><a href="#" style="color: #fff;">Delete</a></button>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div style="padding-bottom: 20vw;">

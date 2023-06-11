@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
+use App\Models\BimbinganPelajar;
 
 class UIGuruController extends Controller
 {
@@ -122,6 +123,7 @@ class UIGuruController extends Controller
 
     public function bimpelajar()
     {
-        return view('dashboard.guru.bimbinganpelajar.bimpelajar');
+        $data = BimbinganPelajar::all();
+        return view('dashboard.guru.bimbinganpelajar.bimpelajar', compact('data'));
     }
 }
