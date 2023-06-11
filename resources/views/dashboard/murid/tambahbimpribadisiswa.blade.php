@@ -162,7 +162,7 @@
                                 <a class="nav-link active" href="{{ url('bimpribadisiswa') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#"><i class="fas fa-users"></i>Bimbingan Sosial</a>
+                                <a class="nav-link" href="{{ url('bimsosialsiswa') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>

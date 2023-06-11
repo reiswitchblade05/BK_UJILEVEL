@@ -83,8 +83,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
 
     //Bimbingan Sosial Pages
     Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
-    Route::get('/tambahbimsosial', [UIGuruController::class, 'tambahbimsosial'])->name('tambahbimsosial');
-    Route::post('/insertbimsosial', [UIGuruController::class, 'insertbimsosial'])->name('insertbimsosial');
     Route::get('/editbimsosial/{id}', [UIGuruController::class, 'editbimsosial'])->name('editbimsosial');
     Route::post('/updatebimsosial/{id}', [UIGuruController::class, 'updatebimsosial'])->name('updatebimsosial');
     Route::get('/tambahhasilsosial/{id}', [UIGuruController::class, 'tambahhasilsosial'])->name('tambahhasilsosial');
@@ -98,6 +96,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
 Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
     route::get('/walikelas', [UIWaliKelasController::class, 'walikelas'])->name('walikelas');
     route::get('/bimpribadiwali', [UIWaliKelasController::class, 'bimpribadiwali'])->name('bimpribadiwali');
+    route::get('/bimsosialwali', [UIWaliKelasController::class, 'bimsosialwali'])->name('bimsosialwali');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:murid']], function () {
@@ -105,4 +104,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:murid']], function () {
     Route::get('/bimpribadisiswa', [UIMuridController::class, 'bimpribadisiswa'])->name('bimpribadisiswa');
     Route::get('/tambahbimpribadisiswa', [UIMuridController::class, 'tambahbimpribadisiswa'])->name('tambahbimpribadisiswa');
     Route::post('/insertbimpribadisiswa', [UIMuridController::class, 'insertbimpribadisiswa'])->name('insertbimpribadisiswa');
+    Route::get('/bimsosialsiswa', [UIMuridController::class, 'bimsosialsiswa'])->name('bimsosialsiswa');
+    Route::get('/tambahbimsosialsiswa', [UIMuridController::class, 'tambahbimsosialsiswa'])->name('tambahbimsosialsiswa');
+    Route::post('/insertbimsosialsiswa', [UIMuridController::class, 'insertbimsosialsiswa'])->name('insertbimsosialsiswa');
 });

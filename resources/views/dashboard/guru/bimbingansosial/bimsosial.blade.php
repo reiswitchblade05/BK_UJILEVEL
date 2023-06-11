@@ -275,7 +275,6 @@
                                     </div>
                                     @endif
                                     <div class="card-body">
-                                        <button class="btn-tambah"> <a href="{{ url('tambahbimsosial') }}" style="color: #fff;">Tambah</a> </button>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered first">
                                                 <thead>
