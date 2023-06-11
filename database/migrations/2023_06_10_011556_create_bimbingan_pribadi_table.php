@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('nipd');
             $table->string('tema_konseling');
             $table->dateTime('jadwal_konseling', $precision = 0);
-            $table->enum('status', ['Diproses', 'Diterima']);
+            $table->enum('status', ['Diproses', 'Selesai']);
             $table->string('hasil')->nullable();
             $table->string('tindak_lanjut')->nullable();
 

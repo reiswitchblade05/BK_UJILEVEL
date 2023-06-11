@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('nama_siswa');
             $table->dateTime('jadwal', $precision = 0);
-            $table->string('nama_sosialisasi');
-            $table->unsignedBigInteger('karir_id');
+            $table->string('cita-cita');
             $table->string('alasan_siswa');
             $table->string('tujuan_siswa');
-            $table->string('saran');
+            $table->enum('status', ['Diproses', 'Selesai']);
+            $table->string('saran')->nullable();
             $table->timestamps();
         });
     }

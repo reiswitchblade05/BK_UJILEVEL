@@ -253,7 +253,7 @@
                                     background-color: #d00f0f;
                                 }
 
-                                .Diterima {
+                                .Selesai {
                                     color: #fff;
                                     background-color: green;
                                 }

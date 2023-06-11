@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('kelas');
             $table->dateTime('jadwal_siswa', $precision = 0);
             $table->string('konflik_permasalahan');
-            $table->enum('status', ['Diproses', 'Diterima']);
+            $table->enum('status', ['Diproses', 'Selesai']);
             $table->string('hasil')->nullable();
             $table->string('tindak_lanjut')->nullable();
             $table->timestamps();

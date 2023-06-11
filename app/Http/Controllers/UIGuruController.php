@@ -45,7 +45,7 @@ class UIGuruController extends Controller
     {
         $data = BimbinganPribadi::find($id);
         $data->update([
-            'status' => 'Diterima',
+            'status' => 'Selesai',
             'hasil' => $request->hasil,
             'tindak_lanjut' => $request->tindak_lanjut,
         ]);
@@ -101,7 +101,7 @@ class UIGuruController extends Controller
     {
         $data = BimbinganSosial::find($id);
         $data->update([
-            'status' => 'Diterima',
+            'status' => 'Selesai',
             'hasil' => $request->hasil,
             'tindak_lanjut' => $request->tindak_lanjut,
         ]);
@@ -122,6 +122,6 @@ class UIGuruController extends Controller
 
     public function bimpelajar()
     {
-        return view('dashboard.guru.bimpelajar');
+        return view('dashboard.guru.bimbinganpelajar.bimpelajar');
     }
 }
