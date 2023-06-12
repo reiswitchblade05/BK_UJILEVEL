@@ -156,9 +156,6 @@
                                 <a class="nav-link" href="{{ url('guru') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('jadwalguru') }}"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ url('bimbinganpribadi') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
@@ -166,6 +163,9 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('petakerawanan') }}"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('bimbingankarir') }}"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('bimbinganpelajar') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>

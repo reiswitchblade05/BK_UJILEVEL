@@ -156,9 +156,6 @@
                                 <a class="nav-link" href="{{ url('guru') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ url('jadwalguru') }}"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ url('bimbinganpribadi') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
@@ -166,6 +163,9 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('petakerawanan') }}"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ url('bimbingankarir') }}"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('bimbinganpelajar') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
@@ -196,13 +196,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Jadwal </h2>
+                                <h2 class="pageheader-title">Bimbingan Karir </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Guru BK</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Jadwal</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Bimbingan Karir</li>
                                         </ol>
                                     </nav>
                                 </div>

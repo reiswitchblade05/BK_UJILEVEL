@@ -71,7 +71,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 
 Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     Route::get('/guru', [UIGuruController::class, 'guru'])->name('guru');
-    Route::get('/jadwalguru', [UIGuruController::class, 'jadwalguru'])->name('jadwalguru');
+
+    Route::get('/bimbingankarir', [UIGuruController::class, 'bimkarir'])->name('bimkarir');
 
     //Bimbingan Pribadi Pages
     Route::get('/bimbinganpribadi', [UIGuruController::class, 'bimpribadi'])->name('bimpribadi');
