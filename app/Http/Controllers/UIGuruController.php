@@ -88,6 +88,13 @@ class UIGuruController extends Controller
         return view('dashboard.guru.bimbingansosial.bimsosial', compact('data'));
     }
 
+    public function detailbimsosial($id)
+    {
+        $data = BimbinganSosial::find($id);
+        return view('dashboard.guru.bimbingansosial.detailbimsosial', compact('data'));
+    }
+
+
     public function editbimsosial($id)
     {
         $data = BimbinganSosial::find($id);

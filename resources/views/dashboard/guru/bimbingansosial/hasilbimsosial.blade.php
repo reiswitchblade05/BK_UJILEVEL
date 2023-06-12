@@ -196,7 +196,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Bimbingan Pribadi </h2>
+                                <h2 class="pageheader-title">Bimbingan Sosial </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
@@ -245,11 +245,11 @@
                                     <div class="card-body">
                                         <form action="/inserthasilsosial/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                             @csrf
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="hasil" placeholder="Hasil" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Hasil" name="hasil" rows="3"></textarea>
                                             </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tindak Lanjut" name="tindak_lanjut" rows="3"></textarea>
                                             </div>
                                             <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimbinganpribadi') }}" style="color: #fff;">Kembali</a></button>
                                         </form>

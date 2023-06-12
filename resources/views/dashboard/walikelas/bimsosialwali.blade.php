@@ -216,6 +216,15 @@
 
                         <div class="row">
                             <style>
+                                .btn-detail {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #00698e;
+                                }
+
                                 .Selesai {
                                     color: #fff;
                                     background-color: green;
@@ -248,8 +257,7 @@
                                                         <th>Jadwal</th>
                                                         <th>Permasalahan</th>
                                                         <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
+                                                        <th>Misc.</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -264,8 +272,9 @@
                                                         <td>{{ $row->jadwal_siswa }}</td>
                                                         <td>{{ $row->konflik_permasalahan }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
+                                                        <td>
+                                                            <button class="btn-detail"><a href="/detailbimsosialwali/{{ $row->id }}" style="color: #fff;">More</a></button>
+                                                        </td>
                                                     </tr>
                                                     @endforeach
                                                 </tbody>

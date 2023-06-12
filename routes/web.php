@@ -84,6 +84,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
 
     //Bimbingan Sosial Pages
     Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
+    Route::get('/detailbimsosial/{id}', [UIGuruController::class, 'detailbimsosial'])->name('detailbimsosial');
     Route::get('/editbimsosial/{id}', [UIGuruController::class, 'editbimsosial'])->name('editbimsosial');
     Route::post('/updatebimsosial/{id}', [UIGuruController::class, 'updatebimsosial'])->name('updatebimsosial');
     Route::get('/tambahhasilsosial/{id}', [UIGuruController::class, 'tambahhasilsosial'])->name('tambahhasilsosial');
@@ -106,6 +107,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
     route::get('/bimpribadiwali', [UIWaliKelasController::class, 'bimpribadiwali'])->name('bimpribadiwali');
     route::get('/detailbimpribadiwali/{id}', [UIWaliKelasController::class, 'detailbimpribadiwali'])->name('detailbimpribadiwali');
     route::get('/bimsosialwali', [UIWaliKelasController::class, 'bimsosialwali'])->name('bimsosialwali');
+    route::get('/detailbimsosialwali/{id}', [UIWaliKelasController::class, 'detailbimsosialwali'])->name('detailbimsosialwali');
     route::get('/bimpelajarwali', [UIWaliKelasController::class, 'bimpelajarwali'])->name('bimpelajarwali');
     Route::get('/tambahhasilpelajarwali/{id}', [UIWaliKelasController::class, 'tambahhasilpelajarwali'])->name('tambahhasilpelajarwali');
     Route::post('/inserthasilpelajarwali/{id}', [UIWaliKelasController::class, 'inserthasilpelajarwali'])->name('inserthasilpelajarwali');
@@ -120,9 +122,12 @@ Route::group(['middleware' => ['auth', 'ceklevel:murid']], function () {
     Route::get('/tambahbimpribadisiswa', [UIMuridController::class, 'tambahbimpribadisiswa'])->name('tambahbimpribadisiswa');
     Route::post('/insertbimpribadisiswa', [UIMuridController::class, 'insertbimpribadisiswa'])->name('insertbimpribadisiswa');
 
+    //Bimbingan Sosial Pages
     Route::get('/bimsosialsiswa', [UIMuridController::class, 'bimsosialsiswa'])->name('bimsosialsiswa');
     Route::get('/tambahbimsosialsiswa', [UIMuridController::class, 'tambahbimsosialsiswa'])->name('tambahbimsosialsiswa');
     Route::post('/insertbimsosialsiswa', [UIMuridController::class, 'insertbimsosialsiswa'])->name('insertbimsosialsiswa');
+    Route::get('/detailbimsosialsiswa/{id}', [UIMuridController::class, 'detailbimsosialsiswa'])->name('detailbimsosialsiswa');
+
     Route::get('/bimpelajarsiswa', [UIMuridController::class, 'bimpelajarsiswa'])->name('bimpelajarsiswa');
     Route::get('/tambahbimpelajarsiswa', [UIMuridController::class, 'tambahbimpelajarsiswa'])->name('tambahbimpelajarsiswa');
     Route::post('/insertbimpelajarsiswa', [UIMuridController::class, 'insertbimpelajarsiswa'])->name('insertbimpelajarsiswa');
