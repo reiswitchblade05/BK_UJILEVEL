@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('alasan_siswa');
             $table->string('tujuan_siswa');
             $table->enum('status', ['Diproses', 'Selesai']);
-            $table->string('saran')->nullable();
+            $table->text('saran')->nullable();
             $table->timestamps();
         });
     }

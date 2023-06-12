@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('tema');
             $table->dateTime('jadwal_siswa', $precision = 0);
             $table->enum('status', ['Diproses', 'Selesai']);
-            $table->string('hasil')->nullable();
-            $table->string('tindak_lanjut')->nullable();
+            $table->text('hasil')->nullable();
+            $table->text('tindak_lanjut')->nullable();
             $table->timestamps();
         });
     }

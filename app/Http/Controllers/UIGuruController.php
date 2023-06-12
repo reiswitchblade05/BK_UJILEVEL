@@ -55,6 +55,12 @@ class UIGuruController extends Controller
         return redirect()->route('bimpribadi')->with('success', 'Data berhasil diperbarui!');
     }
 
+    public function detailbimpribadi($id)
+    {
+        $data = BimbinganPribadi::find($id);
+        return view('dashboard.guru.bimbinganpribadi.detailbimpribadi', compact('data'));
+    }
+
     public function editbimpribadi($id)
     {
         $data = BimbinganPribadi::find($id);

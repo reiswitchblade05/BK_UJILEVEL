@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('bimbingan_pribadi', function (Blueprint $table) {
             $table->id();
             $table->string('nama_siswa');
-            $table->integer('nipd');
+            $table->string('kelas');
             $table->string('tema_konseling');
             $table->dateTime('jadwal_konseling', $precision = 0);
             $table->enum('status', ['Diproses', 'Selesai']);
-            $table->string('hasil')->nullable();
-            $table->string('tindak_lanjut')->nullable();
+            $table->text('hasil')->nullable();
+            $table->text('tindak_lanjut')->nullable();
             $table->timestamps();
         });
     }

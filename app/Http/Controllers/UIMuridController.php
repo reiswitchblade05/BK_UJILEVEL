@@ -18,15 +18,21 @@ class UIMuridController extends Controller
 
     public function bimpribadisiswa()
     {
-        $data = BimbinganPribadi::with('siswa')->get();
+        $data = BimbinganPribadi::with('siswa', 'kelas')->get();
         return view('dashboard.murid.bimpribadisiswa', compact('data'));
+    }
+
+    public function detailbimpribadisiswa($id)
+    {
+        $data = BimbinganPribadi::find($id);
+        return view('dashboard.murid.detailbimpribadisiswa', compact('data'));
     }
 
     public function tambahbimpribadisiswa()
     {
         $data = Murid::all();
-        // dd($data);
-        return view('dashboard.murid.tambahbimpribadisiswa', compact('data'));
+        $dataa = Kelas::all();
+        return view('dashboard.murid.tambahbimpribadisiswa', compact('data', 'dataa'));
     }
 
     public function insertbimpribadisiswa(Request $request)

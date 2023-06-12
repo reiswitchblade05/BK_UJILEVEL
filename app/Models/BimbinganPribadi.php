@@ -11,11 +11,16 @@ class BimbinganPribadi extends Model
     protected $table = "bimbingan_pribadi";
     protected $primaryKey = "id";
     protected $fillable = [
-        'nama_siswa', 'nipd', 'tema_konseling', 'jadwal_konseling', 'status', 'hasil', 'tindak_lanjut'
+        'nama_siswa', 'kelas', 'tema_konseling', 'jadwal_konseling', 'status', 'hasil', 'tindak_lanjut'
     ];
 
     public function siswa()
     {
         return $this->belongsTo(Murid::class, 'nama_siswa');
+    }
+
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'kelas');
     }
 }

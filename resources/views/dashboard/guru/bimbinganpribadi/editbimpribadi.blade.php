@@ -248,8 +248,8 @@
                                             <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
                                                 <option value="{{ $data->nama_siswa }}">{{ $data->nama_siswa }}</option>
                                             </select>
-                                            <select name="nipd" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
-                                                <option value="{{ $data->nisn }}">{{ $data->nipd }}</option>
+                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
+                                                <option value="{{ $data->kelas }}">{{ $data->kelas }}</option>
                                             </select>
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $data->tema_konseling }}" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">

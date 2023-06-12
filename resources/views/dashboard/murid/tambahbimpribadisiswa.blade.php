@@ -251,10 +251,10 @@
                                                     <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
                                                 @endforeach
                                             </select>
-                                            <select name="nipd" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                                <option selected>NISN</option>
-                                                @foreach($data as $murid)
-                                                    <option value="{{ $murid->nisn }}">{{ $murid->nisn }}</option>
+                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                            <option selected>Kelas</option>
+                                                @foreach($dataa as $kelas)
+                                                    <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
                                                 @endforeach
                                             </select>
                                             <div class="input-group mb-3">

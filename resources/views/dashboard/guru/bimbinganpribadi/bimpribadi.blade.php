@@ -216,6 +216,15 @@
 
                         <div class="row">
                             <style>
+                                .btn-detail {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #00698e;
+                                }
+
                                 .btn-edit {
                                     border-radius: 7px;
                                     padding: 7px;
@@ -272,11 +281,10 @@
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama Murid</th>
+                                                        <th>Kelas</th>
                                                         <th>Tema</th>
                                                         <th>Jadwal</th>
                                                         <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
                                                         <th>Misc.</th>
                                                     </tr>
                                                 </thead>
@@ -288,12 +296,12 @@
                                                     <tr>
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $row->nama_siswa }}</td>
+                                                        <td>{{ $row->kelas }}</td>
                                                         <td>{{ $row->tema_konseling }}</td>
                                                         <td>{{ $row->jadwal_konseling }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
                                                         <td>
+                                                            <button class="btn-detail"><a href="/detailbimpribadi/{{ $row->id }}" style="color: #fff;">More</a></button>
                                                             <button class="btn-edit"><a href="/editbimpribadi/{{ $row->id }}" style="color: #fff;">Edit</a></button>
                                                             <button class="btn-input"><a href="/tambahhasilpribadi/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
                                                             <button class="btn-delete"><a href="/hapusbimpribadi/{{ $row->id }}" style="color: #fff;">Delete</a></button>

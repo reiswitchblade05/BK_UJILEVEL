@@ -215,7 +215,16 @@
                     <div class="ecommerce-widget">
 
                     <div class="row">
-                            <style>
+                            <style> 
+                                .btn-detail {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #00698e;
+                                }
+
                                 .btn-tambah {
                                     border-radius: 7px;
                                     padding: 7px;
@@ -255,11 +264,11 @@
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama Murid</th>
+                                                        <th>Kelas</th>
                                                         <th>Tema</th>
                                                         <th>Jadwal</th>
                                                         <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
+                                                        <th>Misc.</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -270,11 +279,13 @@
                                                     <tr>
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $row->nama_siswa }}</td>
+                                                        <td>{{ $row->kelas }}</td>
                                                         <td>{{ $row->tema_konseling }}</td>
                                                         <td>{{ $row->jadwal_konseling }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
+                                                        <td>
+                                                            <button class="btn-detail"><a href="/detailbimpribadisiswa/{{ $row->id }}" style="color: #fff;">More</a></button>
+                                                        </td>
                                                     </tr>
                                                     @endforeach
                                                 </tbody>

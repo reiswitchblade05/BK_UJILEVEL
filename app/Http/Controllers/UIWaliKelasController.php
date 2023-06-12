@@ -20,6 +20,12 @@ class UIWaliKelasController extends Controller
         return view('dashboard.walikelas.bimpribadiwali', compact('data'));
     }
 
+    public function detailbimpribadiwali($id)
+    {
+        $data = BimbinganPribadi::find($id);
+        return view('dashboard.walikelas.detailbimpribadiwali', compact('data'));
+    }
+
     public function bimsosialwali()
     {
         $data = BimbinganSosial::all();
