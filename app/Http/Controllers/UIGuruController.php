@@ -130,4 +130,42 @@ class UIGuruController extends Controller
         $data = BimbinganPelajar::all();
         return view('dashboard.guru.bimbinganpelajar.bimpelajar', compact('data'));
     }
+
+    public function editbimpelajar($id)
+    {
+        $data = BimbinganPelajar::find($id);
+        // dd($data);
+        return view('dashboard.guru.bimbinganpelajar.editbimpelajar', compact('data'));
+    }
+
+    public function updatebimpelajar(Request $request, $id)
+    {
+        $data = BimbinganPelajar::find($id);
+        $data->update($request->all());
+        return redirect()->route('bimpelajar')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function tambahhasilpelajar($id)
+    {
+        $data = BimbinganPelajar::find($id);
+        return view('dashboard.guru.bimbinganpelajar.hasilbimpelajar', compact('data'));
+    }
+
+    public function inserthasilpelajar(Request $request, $id)
+    {
+        $data = BimbinganPelajar::find($id);
+        $data->update([
+            'status' => 'Selesai',
+            'hasil' => $request->hasil,
+            'tindak_lanjut' => $request->tindak_lanjut,
+        ]);
+        return redirect()->route('bimpelajar')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapusbimpelajar(Request $request, $id)
+    {
+        $row = BimbinganPelajar::find($id);
+        $row->delete();
+        return redirect()->route('bimpelajar')->with('success', 'Data berhasil dihapuskan!');
+    }
 }

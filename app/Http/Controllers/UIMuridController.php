@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
+use App\Models\BimbinganPelajar;
 use App\Models\Kelas;
 use App\Models\Murid;
 
@@ -51,5 +52,24 @@ class UIMuridController extends Controller
     {
         BimbinganSosial::create($request->all());
         return redirect()->route('bimsosialsiswa')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function bimpelajarsiswa()
+    {
+        $data = BimbinganPelajar::all();
+        return view('dashboard.murid.bimpelajarsiswa', compact('data'));
+    }
+
+    public function tambahbimpelajarsiswa()
+    {
+        $data = Murid::all();
+        $dataa = Kelas::all();
+        return view('dashboard.murid.tambahbimpelajarsiswa', compact('data', 'dataa'));
+    }
+
+    public function insertbimpelajarsiswa(Request $request)
+    {
+        BimbinganPelajar::create($request->all());
+        return redirect()->route('bimpelajarsiswa')->with('success', 'Data berhasil ditambahkan!');
     }
 }

@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <link href="{{ asset('/assets-murid/vendor/fonts/circular-std/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/libs/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/fonts/fontawesome/css/fontawesome-all.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/charts/chartist-bundle/chartist.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/charts/morris-bundle/morris.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/charts/c3charts/c3.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets-murid/vendor/fonts/flag-icon-css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link href="{{ asset('/assets-guru/vendor/fonts/circular-std/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/libs/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/fonts/fontawesome/css/fontawesome-all.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/charts/chartist-bundle/chartist.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/charts/morris-bundle/morris.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/charts/c3charts/c3.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets-guru/vendor/fonts/flag-icon-css/flag-icon.min.css') }}">
     <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
 </head>
 
@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="dashboard.html"><img src="assets-murid/images/logo.png" alt="" style="width: 135px;"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="{{asset('assets-guru/images/logo.png')}}" alt="" style="width: 135px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +48,7 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-murid/images/avatar-22.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-22.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -56,7 +56,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-murid/images/avatar-33.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-33.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
@@ -64,7 +64,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-murid/images/avatar-44.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-44.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -72,7 +72,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets-murid/images/avatar-55.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="{{asset('assets-guru/images/avatar-55.jpg')}}" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -92,24 +92,24 @@
                                 <li class="connection-list">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-murid/images/github.png" alt=""> <span>Github</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-guru/images/github.png" alt=""> <span>Github</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-murid/images/dribbble.png" alt=""> <span>Dribbble</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-guru/images/dribbble.png" alt=""> <span>Dribbble</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-murid/images/dropbox.png" alt=""> <span>Dropbox</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-guru/images/dropbox.png" alt=""> <span>Dropbox</span></a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-murid/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-guru/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-murid/images/mail_chimp.png" alt=""><span>Mail chimp</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-guru/images/mail_chimp.png" alt=""><span>Mail chimp</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets-murid/images/slack.png" alt=""> <span>Slack</span></a>
+                                            <a href="#" class="connection-item"><img src="assets-guru/images/slack.png" alt=""> <span>Slack</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -119,10 +119,10 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets-murid/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets-guru/images/avatar-admin.jpg')}}" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">Murid</h5>
+                                    <h5 class="mb-0 text-white nav-user-name">Guru</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
@@ -149,26 +149,26 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
+                        <li class="nav-divider">
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="{{ url('guru') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
+                                <a class="nav-link" href="{{ url('jadwalguru') }}"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('bimpribadisiswa') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
+                                <a class="nav-link active" href="{{ url('bimbinganpribadi') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{ url('bimsosialsiswa') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
+                                <a class="nav-link" href="{{ url('bimbingansosial') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
+                                <a class="nav-link" href="{{ url('petakerawanan') }}"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('bimpelajarsiswa') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
+                                <a class="nav-link" href="{{ url('bimbinganpelajar') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
                             </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">
@@ -196,13 +196,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Dashboard </h2>
+                                <h2 class="pageheader-title">Bimbingan Pribadi </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Murid</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Guru BK</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Bimbingan Pribadi</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -215,49 +215,49 @@
                     <div class="ecommerce-widget">
 
                         <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <style>
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 110px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+
+                                .btn-back {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+                            </style>
+                            <!-- ============================================================== -->
+                            <!-- basic table  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
+                                    <h5 class="card-header">Insert Hasil Bimbingan Pelajar</h5>
                                     <div class="card-body">
-                                        <h5 class="text-muted">Kelas</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">11</h1>
+                                    <form action="/inserthasilpelajar/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="hasil" placeholder="Hasil" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Wali Kelas</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">12</h1>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Guru</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">13</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Murid</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">14</h1>
-                                        </div>
+                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimbinganpelajar') }}" style="color: #fff;">Kembali</a></button>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div style="padding-bottom: 20vw;">
             <!-- ============================================================== -->
             <!-- footer -->
@@ -276,25 +276,25 @@
     <!-- ============================================================== -->
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
-    <script src="assets-murid/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets-guru/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->
-    <script src="assets-murid/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets-guru/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <!-- slimscroll js -->
-    <script src="assets-murid/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="assets-guru/vendor/slimscroll/jquery.slimscroll.js"></script>
     <!-- main js -->
-    <script src="assets-murid/libs/js/main-js.js"></script>
+    <script src="assets-guru/libs/js/main-js.js"></script>
     <!-- chart chartist js -->
-    <script src="assets-murid/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <script src="assets-guru/vendor/charts/chartist-bundle/chartist.min.js"></script>
     <!-- sparkline js -->
-    <script src="assets-murid/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <script src="assets-guru/vendor/charts/sparkline/jquery.sparkline.js"></script>
     <!-- morris js -->
-    <script src="assets-murid/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="assets-murid/vendor/charts/morris-bundle/morris.js"></script>
+    <script src="assets-guru/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="assets-guru/vendor/charts/morris-bundle/morris.js"></script>
     <!-- chart c3 js -->
-    <script src="assets-murid/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="assets-murid/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets-murid/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets-murid/libs/js/dashboard-ecommerce.js"></script>
+    <script src="assets-guru/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="assets-guru/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="assets-guru/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="assets-guru/libs/js/dashboard-ecommerce.js"></script>
 </body>
 
 </html>

@@ -258,7 +258,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Bimbingan Pribadi</h5>
+                                    <h5 class="card-header">Tabel Bimbingan Pelajar</h5>
                                     @if ($message = Session::get('success'))
                                     <div class="alert alert-success" role="alert">
                                         {{ $message }}
@@ -272,6 +272,7 @@
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama Murid</th>
+                                                        <th>Kelas</th>
                                                         <th>Tema</th>
                                                         <th>Jadwal</th>
                                                         <th>Status</th>
@@ -295,9 +296,9 @@
                                                         <td>{{ $row->hasil }}</td>
                                                         <td>{{ $row->tindak_lanjut }}</td>
                                                         <td>
-                                                            <button class="btn-edit"><a href="#" style="color: #fff;">Edit</a></button>
-                                                            <button class="btn-input"><a href="#" style="color: #fff;">Hasil</a></button>
-                                                            <button class="btn-delete"><a href="#" style="color: #fff;">Delete</a></button>
+                                                            <button class="btn-edit"><a href="/editbimpelajar/{{ $row->id }}" style="color: #fff;">Edit</a></button>
+                                                            <button class="btn-input"><a href="/tambahhasilpelajar/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
+                                                            <button class="btn-delete"><a href="/hapusbimpelajar/{{ $row->id }}" style="color: #fff;">Delete</a></button>
                                                         </td>
                                                     </tr>
                                                     @endforeach

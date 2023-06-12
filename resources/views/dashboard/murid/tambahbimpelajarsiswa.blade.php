@@ -153,7 +153,7 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="{{ url('murid') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Jadwal</a>
@@ -168,7 +168,7 @@
                                 <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('bimpelajarsiswa') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
+                                <a class="nav-link active" href="{{ url('bimpelajarsiswa') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
                             </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">
@@ -215,43 +215,58 @@
                     <div class="ecommerce-widget">
 
                         <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <style>
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 110px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+
+                                .btn-back {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+                            </style>
+                            <!-- ============================================================== -->
+                            <!-- basic table  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
+                                    <h5 class="card-header">Insert Bimbingan Pelajar</h5>
                                     <div class="card-body">
-                                        <h5 class="text-muted">Kelas</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">11</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Wali Kelas</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">12</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Guru</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">13</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Murid</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">14</h1>
-                                        </div>
+                                        <form action="{{ url('insertbimpelajarsiswa') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Nama Siswa</option>
+                                                @foreach($data as $murid)
+                                                    <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
+                                                @endforeach
+                                            </select>
+                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Kelas</option>
+                                                    @foreach($dataa as $kelas)
+                                                        <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
+                                                    @endforeach
+                                            </select>
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="tema" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <input name="jadwal_siswa" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                            <select name="status" class="form-select w-100 p-2 mb-3 mt-3" aria-label="Default select example">
+                                                <option selected>Status</option>
+                                                <option value="Diproses">Diproses</option>
+                                            </select>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimpelajarsiswa') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

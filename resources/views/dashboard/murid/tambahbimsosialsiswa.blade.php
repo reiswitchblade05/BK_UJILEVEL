@@ -168,7 +168,7 @@
                                 <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
+                                <a class="nav-link" href="{{ url('bimpelajarsiswa') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
                             </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">
@@ -265,7 +265,7 @@
                                             <option selected>Status</option>
                                             <option value="Diproses">Diproses</option>
                                         </select>
-                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimsosial') }}" style="color: #fff;">Kembali</a></button>
+                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimsosialsiswa') }}" style="color: #fff;">Kembali</a></button>
                                     </form>
                                     </div>
                                 </div>
