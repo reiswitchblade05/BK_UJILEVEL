@@ -13,4 +13,9 @@ class BimbinganPribadi extends Model
     protected $fillable = [
         'nama_siswa', 'nipd', 'tema_konseling', 'jadwal_konseling', 'status', 'hasil', 'tindak_lanjut'
     ];
+
+    public function siswa()
+    {
+        return $this->belongsTo(Murid::class, 'nama_siswa');
+    }
 }

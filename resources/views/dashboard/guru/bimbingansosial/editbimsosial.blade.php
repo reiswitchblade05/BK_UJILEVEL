@@ -245,12 +245,12 @@
                                     <div class="card-body">
                                         <form action="/updatebimsosial/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                             @csrf
-                                            <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->nama_siswa }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->kelas }}" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
-                                            </div>
+                                            <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
+                                                <option value="{{ $data->nama_siswa }}">{{ $data->nama_siswa }}</option>
+                                            </select>
+                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
+                                                <option value="{{ $data->kelas }}">{{ $data->kelas }}</option>
+                                            </select>
                                             <input name="jadwal_siswa" value="{{ $data->jadwal_siswa }}" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">

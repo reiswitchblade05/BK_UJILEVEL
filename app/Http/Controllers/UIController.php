@@ -80,7 +80,6 @@ class UIController extends Controller
 
         $wali = new Walikelas([
             'nama_guru' => $request->nama_guru,
-            'kelas' => $request->kelas,
             'jenis_kelamin' => $request->jenis_kelamin,
             'no_telepon' => $request->no_telepon,
             'nip' => $request->nip,
@@ -160,7 +159,6 @@ class UIController extends Controller
 
         $guru = new Guru([
             'nama_guru' => $request->nama_guru,
-            'kelas' => $request->kelas,
             'jenis_kelamin' => $request->jenis_kelamin,
             'no_telepon' => $request->no_telepon,
             'nip' => $request->nip,

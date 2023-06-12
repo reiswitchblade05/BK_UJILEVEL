@@ -245,12 +245,12 @@
                                     <div class="card-body">
                                         <form action="/updatebimpribadi/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                             @csrf
-                                            <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->nama_siswa }}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->nipd }}" name="nipd" placeholder="NIPD" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
-                                            </div>
+                                            <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
+                                                <option value="{{ $data->nama_siswa }}">{{ $data->nama_siswa }}</option>
+                                            </select>
+                                            <select name="nipd" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
+                                                <option value="{{ $data->nisn }}">{{ $data->nipd }}</option>
+                                            </select>
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $data->tema_konseling }}" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>

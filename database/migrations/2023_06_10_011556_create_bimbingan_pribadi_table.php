@@ -22,7 +22,6 @@ return new class extends Migration
             $table->enum('status', ['Diproses', 'Selesai']);
             $table->string('hasil')->nullable();
             $table->string('tindak_lanjut')->nullable();
-
             $table->timestamps();
         });
     }

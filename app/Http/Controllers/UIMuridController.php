@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
+use App\Models\Kelas;
+use App\Models\Murid;
 
 class UIMuridController extends Controller
 {
@@ -15,13 +17,15 @@ class UIMuridController extends Controller
 
     public function bimpribadisiswa()
     {
-        $data = BimbinganPribadi::all();
+        $data = BimbinganPribadi::with('siswa')->get();
         return view('dashboard.murid.bimpribadisiswa', compact('data'));
     }
 
     public function tambahbimpribadisiswa()
     {
-        return view('dashboard.murid.tambahbimpribadisiswa');
+        $data = Murid::all();
+        // dd($data);
+        return view('dashboard.murid.tambahbimpribadisiswa', compact('data'));
     }
 
     public function insertbimpribadisiswa(Request $request)
@@ -32,13 +36,15 @@ class UIMuridController extends Controller
 
     public function bimsosialsiswa()
     {
-        $data = BimbinganSosial::all();
+        $data = BimbinganSosial::with('siswa', 'kelas')->get();
         return view('dashboard.murid.bimsosialsiswa', compact('data'));
     }
 
     public function tambahbimsosialsiswa()
     {
-        return view('dashboard.murid.tambahbimsosialsiswa');
+        $data = Murid::all();
+        $dataa = Kelas::all();
+        return view('dashboard.murid.tambahbimsosialsiswa', compact('data', 'dataa'));
     }
 
     public function insertbimsosialsiswa(Request $request)

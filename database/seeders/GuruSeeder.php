@@ -19,7 +19,6 @@ class GuruSeeder extends Seeder
         DB::table('guru')->insert([
             'nama_guru' => 'Pak Ricky',
             'user_id' => '4',
-            'kelas' => 'XI PPLG 1',
             'jenis_kelamin' => 'Laki-Laki',
             'no_telepon' => '12345678',
             'nip' => '999',

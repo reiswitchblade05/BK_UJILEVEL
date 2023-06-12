@@ -226,7 +226,7 @@
                                     background-color: #1d3988;
                                 }
 
-                                .Diterima {
+                                .Selesai {
                                     color: #fff;
                                     background-color: green;
                                 }

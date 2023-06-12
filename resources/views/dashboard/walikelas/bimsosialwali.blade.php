@@ -216,7 +216,7 @@
 
                         <div class="row">
                             <style>
-                                .Diterima {
+                                .Selesai {
                                     color: #fff;
                                     background-color: green;
                                 }

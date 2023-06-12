@@ -245,12 +245,18 @@
                                     <div class="card-body">
                                         <form action="{{ url('insertbimpribadisiswa') }}" method="POST" enctype="multipart/form-data">
                                             @csrf
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="nipd" placeholder="NIPD" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                            </div>
+                                            <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Nama Siswa</option>
+                                                @foreach($data as $murid)
+                                                    <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
+                                                @endforeach
+                                            </select>
+                                            <select name="nipd" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>NISN</option>
+                                                @foreach($data as $murid)
+                                                    <option value="{{ $murid->nisn }}">{{ $murid->nisn }}</option>
+                                                @endforeach
+                                            </select>
                                             <div class="input-group mb-3">
                                                 <input type="text" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>

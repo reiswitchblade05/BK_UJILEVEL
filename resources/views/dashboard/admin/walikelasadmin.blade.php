@@ -270,7 +270,6 @@
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama Guru</th>
-                                                        <th>Kelas</th>
                                                         <th>Jenis Kelamin</th>
                                                         <th>Nomor Telepon</th>
                                                         <th>Misc.</th>
@@ -284,7 +283,6 @@
                                                     <tr>
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $row->nama_guru }}</td>
-                                                        <td>{{ $row->kelas }}</td>
                                                         <td>{{ $row->jenis_kelamin }}</td>
                                                         <td>{{ $row->no_telepon }}</td>
                                                         <td>

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id()->unique();
             $table->string('nama_guru');
             $table->unsignedBigInteger('user_id');
-            $table->string('kelas');
             $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
             $table->string('no_telepon');
             $table->integer('nip');

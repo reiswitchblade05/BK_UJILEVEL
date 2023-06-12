@@ -19,7 +19,6 @@ class WalikelasSeeder extends Seeder
         DB::table('walikelas')->insert([
             'nama_guru' => 'Pak Erraldo',
             'user_id' => '3',
-            'kelas' => 'XI PPLG 1',
             'jenis_kelamin' => 'Laki-Laki',
             'no_telepon' => '12345',
             'nip' => '666',

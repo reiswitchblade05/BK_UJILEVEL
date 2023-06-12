@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
 use App\Models\BimbinganPelajar;
+use App\Models\Murid;
+use App\Models\Kelas;
 
 class UIGuruController extends Controller
 {
@@ -56,6 +58,7 @@ class UIGuruController extends Controller
     public function editbimpribadi($id)
     {
         $data = BimbinganPribadi::find($id);
+        // dd($dataa);
         return view('dashboard.guru.bimbinganpribadi.editbimpribadi', compact('data'));
     }
 
@@ -82,6 +85,7 @@ class UIGuruController extends Controller
     public function editbimsosial($id)
     {
         $data = BimbinganSosial::find($id);
+        // dd($data);
         return view('dashboard.guru.bimbingansosial.editbimsosial', compact('data'));
     }
 
