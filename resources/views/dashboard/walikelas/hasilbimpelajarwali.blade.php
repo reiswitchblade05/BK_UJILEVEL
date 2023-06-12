@@ -245,12 +245,12 @@
                                     <div class="card-body">
                                     <form action="/inserthasilpelajarwali/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                         @csrf
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="hasil" placeholder="Hasil" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Hasil" name="hasil" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tindak Lanjut" name="tindak_lanjut" rows="3"></textarea>
+                                            </div>
                                         <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimpelajarwali') }}" style="color: #fff;">Kembali</a></button>
                                     </form>
                                     </div>

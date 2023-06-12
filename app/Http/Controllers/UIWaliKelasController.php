@@ -44,6 +44,12 @@ class UIWaliKelasController extends Controller
         return view('dashboard.walikelas.bimpelajarwali', compact('data'));
     }
 
+    public function detailbimpelajarwali($id)
+    {
+        $data = BimbinganPelajar::find($id);
+        return view('dashboard.walikelas.detailbimpelajarwali', compact('data'));
+    }
+
     public function tambahhasilpelajarwali($id)
     {
         $data = BimbinganPelajar::find($id);

@@ -73,6 +73,12 @@ class UIMuridController extends Controller
         return view('dashboard.murid.bimpelajarsiswa', compact('data'));
     }
 
+    public function detailbimpelajarsiswa($id)
+    {
+        $data = BimbinganPelajar::find($id);
+        return view('dashboard.murid.detailbimpelajarsiswa', compact('data'));
+    }
+
     public function tambahbimpelajarsiswa()
     {
         $data = Murid::all();

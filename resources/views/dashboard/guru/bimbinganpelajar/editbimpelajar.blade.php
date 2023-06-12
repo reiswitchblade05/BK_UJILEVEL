@@ -214,7 +214,7 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                    <div class="row">
+                        <div class="row">
                             <style>
                                 .btn-edit {
                                     border-radius: 7px;
@@ -241,7 +241,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Update Bimbingan Pribadi</h5>
+                                    <h5 class="card-header">Update Bimbingan Pelajar</h5>
                                     <div class="card-body">
                                         <form action="/updatebimpelajar/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                             @csrf

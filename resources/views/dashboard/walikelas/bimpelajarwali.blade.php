@@ -216,6 +216,15 @@
 
                         <div class="row">
                             <style>
+                                .btn-detail {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #00698e;
+                                }
+
                                 .btn-input {
                                     border-radius: 7px;
                                     padding: 7px;
@@ -258,8 +267,6 @@
                                                         <th>Tema</th>
                                                         <th>Jadwal</th>
                                                         <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
                                                         <th>Misc.</th>
                                                     </tr>
                                                 </thead>
@@ -275,9 +282,8 @@
                                                         <td>{{ $row->tema }}</td>
                                                         <td>{{ $row->jadwal_siswa }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
                                                         <td>
+                                                            <button class="btn-detail"><a href="/detailbimpelajarwali/{{ $row->id }}" style="color: #fff;">More</a></button>
                                                             <button class="btn-input"><a href="/tambahhasilpelajarwali/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
                                                         </td>
                                                     </tr>

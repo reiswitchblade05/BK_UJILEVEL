@@ -216,6 +216,15 @@
 
                         <div class="row">
                             <style>
+                                .btn-detail {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #00698e;
+                                }
+
                                 .btn-edit {
                                     border-radius: 7px;
                                     padding: 7px;
@@ -276,8 +285,6 @@
                                                         <th>Tema</th>
                                                         <th>Jadwal</th>
                                                         <th>Status</th>
-                                                        <th>Hasil</th>
-                                                        <th>Tindak Lanjut</th>
                                                         <th>Misc.</th>
                                                     </tr>
                                                 </thead>
@@ -293,9 +300,8 @@
                                                         <td>{{ $row->tema }}</td>
                                                         <td>{{ $row->jadwal_siswa }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>{{ $row->hasil }}</td>
-                                                        <td>{{ $row->tindak_lanjut }}</td>
                                                         <td>
+                                                            <button class="btn-detail"><a href="/detailbimpelajar/{{ $row->id }}" style="color: #fff;">More</a></button>
                                                             <button class="btn-edit"><a href="/editbimpelajar/{{ $row->id }}" style="color: #fff;">Edit</a></button>
                                                             <button class="btn-input"><a href="/tambahhasilpelajar/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
                                                             <button class="btn-delete"><a href="/hapusbimpelajar/{{ $row->id }}" style="color: #fff;">Delete</a></button>

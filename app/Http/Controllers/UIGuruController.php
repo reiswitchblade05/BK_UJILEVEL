@@ -144,6 +144,12 @@ class UIGuruController extends Controller
         return view('dashboard.guru.bimbinganpelajar.bimpelajar', compact('data'));
     }
 
+    public function detailbimpelajar($id)
+    {
+        $data = BimbinganPelajar::find($id);
+        return view('dashboard.guru.bimbinganpelajar.detailbimpelajar', compact('data'));
+    }
+
     public function editbimpelajar($id)
     {
         $data = BimbinganPelajar::find($id);
