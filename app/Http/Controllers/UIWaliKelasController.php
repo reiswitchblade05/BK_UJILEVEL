@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
+use App\Models\BimbinganKarir;
 use App\Models\BimbinganPelajar;
 
 class UIWaliKelasController extends Controller
@@ -36,6 +37,18 @@ class UIWaliKelasController extends Controller
     {
         $data = BimbinganSosial::find($id);
         return view('dashboard.walikelas.detailbimsosialwali', compact('data'));
+    }
+
+    public function bimkarirwali()
+    {
+        $data = BimbinganKarir::all();
+        return view('dashboard.walikelas.bimkarirwali', compact('data'));
+    }
+
+    public function detailbimkarirwali($id)
+    {
+        $data = BimbinganKarir::find($id);
+        return view('dashboard.walikelas.detailbimkarirwali', compact('data'));
     }
 
     public function bimpelajarwali()

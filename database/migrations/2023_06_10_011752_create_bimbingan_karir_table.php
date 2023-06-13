@@ -16,12 +16,14 @@ return new class extends Migration
         Schema::create('bimbingan_karir', function (Blueprint $table) {
             $table->id();
             $table->string('nama_siswa');
-            $table->dateTime('jadwal', $precision = 0);
-            $table->string('cita-cita');
-            $table->string('alasan_siswa');
-            $table->string('tujuan_siswa');
+            $table->dateTime('jadwal_bimbingan', $precision = 0);
+            $table->dateTime('jadwal_sosialisasi', $precision = 0)->nullable();
+            $table->string('cita_cita');
+            $table->text('alasan_siswa');
+            $table->text('tujuan_siswa');
             $table->enum('status', ['Diproses', 'Selesai']);
-            $table->text('saran')->nullable();
+            $table->text('hasil')->nullable();
+            $table->text('tindak_lanjut')->nullable();
             $table->timestamps();
         });
     }

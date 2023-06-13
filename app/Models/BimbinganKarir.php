@@ -11,6 +11,6 @@ class BimbinganKarir extends Model
     protected $table = "bimbingan_karir";
     protected $primaryKey = "id";
     protected $fillable = [
-        'nama_siswa', 'jadwal', 'cita-cita', 'alasan_siswa', 'tujuan_siswa', 'status', 'saran'
+        'nama_siswa', 'jadwal_bimbingan', 'jadwal_sosialisasi', 'cita_cita', 'alasan_siswa', 'tujuan_siswa', 'status', 'hasil', 'tindak_lanjut'
     ];
 }

@@ -161,11 +161,8 @@
                             <li class="nav-item ">
                                 <a class="nav-link active" href="{{ url('bimsosialsiswa') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
+                                <a class="nav-link" href="{{ url('bimkarirsiswa') }}"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('bimpelajarsiswa') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
@@ -240,33 +237,33 @@
                             <!-- basic table  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="card">
+                                <div class="card">
                                     <h5 class="card-header">Insert Bimbingan Sosial</h5>
                                     <div class="card-body">
-                                    <form action="{{ url('insertbimsosialsiswa') }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected>Nama Siswa</option>
+                                        <form action="{{ url('insertbimsosialsiswa') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Nama Siswa</option>
                                                 @foreach($data as $murid)
-                                                    <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
+                                                <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
                                                 @endforeach
-                                        </select>
-                                        <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected>Kelas</option>
+                                            </select>
+                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Kelas</option>
                                                 @foreach($dataa as $kelas)
-                                                    <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
+                                                <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
                                                 @endforeach
-                                        </select>
-                                        <input name="jadwal_siswa" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
-                                        <div class="input-group mb-3">
-                                            <input type="text" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                        </div>
-                                        <select name="status" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                            <option selected>Status</option>
-                                            <option value="Diproses">Diproses</option>
-                                        </select>
-                                        <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimsosialsiswa') }}" style="color: #fff;">Kembali</a></button>
-                                    </form>
+                                            </select>
+                                            <input name="jadwal_siswa" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <select name="status" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Status</option>
+                                                <option value="Diproses">Diproses</option>
+                                            </select>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimsosialsiswa') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

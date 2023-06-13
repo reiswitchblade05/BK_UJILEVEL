@@ -161,11 +161,8 @@
                             <li class="nav-item ">
                                 <a class="nav-link" href="{{ url('bimsosialsiswa') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
+                                <a class="nav-link" href="{{ url('bimkarirsiswa') }}"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ url('bimpelajarsiswa') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>

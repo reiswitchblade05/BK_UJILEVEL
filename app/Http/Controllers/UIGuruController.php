@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
+use App\Models\BimbinganKarir;
 use App\Models\BimbinganPelajar;
 use App\Models\Murid;
 use App\Models\Kelas;
@@ -18,7 +19,52 @@ class UIGuruController extends Controller
 
     public function bimkarir()
     {
-        return view('dashboard.guru.bimkarir');
+        $data = BimbinganKarir::all();
+        return view('dashboard.guru.bimbingankarir.bimkarir', compact('data'));
+    }
+
+    public function detailbimkarir($id)
+    {
+        $data = BimbinganKarir::find($id);
+        return view('dashboard.guru.bimbingankarir.detailbimkarir', compact('data'));
+    }
+
+    public function editbimkarir($id)
+    {
+        $data = BimbinganKarir::find($id);
+        // dd($dataa);
+        return view('dashboard.guru.bimbingankarir.editbimkarir', compact('data'));
+    }
+
+    public function updatebimkarir(Request $request, $id)
+    {
+        $data = BimbinganKarir::find($id);
+        $data->update($request->all());
+        return redirect()->route('bimkarir')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function tambahhasilkarir($id)
+    {
+        $data = BimbinganKarir::find($id);
+        return view('dashboard.guru.bimbingankarir.hasilbimkarir', compact('data'));
+    }
+
+    public function inserthasilkarir(Request $request, $id)
+    {
+        $data = BimbinganKarir::find($id);
+        $data->update([
+            'status' => 'Selesai',
+            'hasil' => $request->hasil,
+            'tindak_lanjut' => $request->tindak_lanjut,
+        ]);
+        return redirect()->route('bimkarir')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapusbimkarir(Request $request, $id)
+    {
+        $row = BimbinganKarir::find($id);
+        $row->delete();
+        return redirect()->route('bimkarir')->with('success', 'Data berhasil dihapuskan!');
     }
 
     public function bimpribadi()

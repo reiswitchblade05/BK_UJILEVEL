@@ -159,13 +159,13 @@
                                 <a class="nav-link" href="{{ url('bimpribadiwali') }}"><i class="fas fa-user" style="padding-right: 3px;"></i>Bimbingan Pribadi</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="{{ url('bimsosialwali') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
+                                <a class="nav-link" href="{{ url('bimsosialwali') }}"><i class="fas fa-users"></i>Bimbingan Sosial</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#"><i class="fas fa-align-left" style="padding-right: 5px;"></i>Peta Kerawanan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('bimkarirwali') }}"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
+                                <a class="nav-link active" href="{{ url('bimkarirwali') }}"><i class="fas fa-fw fa-chart-pie"></i>Bimbingan Karir</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('bimpelajarwali') }}"><i class=" fas fa-seedling" style="padding-right: 3px;"></i>Bimbingan Pelajar</a>
@@ -214,7 +214,7 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                        <div class="row">
+                    <div class="row">
                             <style>
                                 .btn-detail {
                                     border-radius: 7px;
@@ -223,6 +223,16 @@
                                     width: 50px;
                                     color: #fff;
                                     background-color: #00698e;
+                                }
+
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 96px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
                                 }
 
                                 .Selesai {
@@ -240,7 +250,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Bimbingan Sosial</h5>
+                                    <h5 class="card-header">Tabel Bimbingan Karir</h5>
                                     @if ($message = Session::get('success'))
                                     <div class="alert alert-success" role="alert">
                                         {{ $message }}
@@ -253,9 +263,9 @@
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama Murid</th>
-                                                        <th>Kelas</th>
-                                                        <th>Jadwal</th>
-                                                        <th>Permasalahan</th>
+                                                        <th>Jadwal Bimbingan</th>
+                                                        <th>Jadwal Sosialisasi</th>
+                                                        <th>Cita-Cita</th>
                                                         <th>Status</th>
                                                         <th>Misc.</th>
                                                     </tr>
@@ -268,12 +278,12 @@
                                                     <tr>
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $row->nama_siswa }}</td>
-                                                        <td>{{ $row->kelas }}</td>
-                                                        <td>{{ $row->jadwal_siswa }}</td>
-                                                        <td>{{ $row->konflik_permasalahan }}</td>
+                                                        <td>{{ $row->jadwal_bimbingan }}</td>
+                                                        <td>{{ $row->jadwal_sosialisasi }}</td>
+                                                        <td>{{ $row->cita_cita }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
                                                         <td>
-                                                            <button class="btn-detail"><a href="/detailbimsosialwali/{{ $row->id }}" style="color: #fff;">More</a></button>
+                                                            <button class="btn-detail"><a href="/detailbimkarirwali/{{ $row->id }}" style="color: #fff;">More</a></button>
                                                         </td>
                                                     </tr>
                                                     @endforeach
