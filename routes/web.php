@@ -90,7 +90,14 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     Route::post('/inserthasilsosial/{id}', [UIGuruController::class, 'inserthasilsosial'])->name('inserthasilsosial');
     Route::get('/hapusbimsosial/{id}', [UIGuruController::class, 'hapusbimsosial'])->name('hapusbimsosial');
 
+    //Peta Kerawanan Pages
     Route::get('/petakerawanan', [UIGuruController::class, 'petakerawanan'])->name('petakerawanan');
+    Route::get('/tambahpetakerawanan', [UIGuruController::class, 'tambahpetakerawanan'])->name('tambahpetakerawanan');
+    Route::post('/insertpetakerawanan', [UIGuruController::class, 'insertpetakerawanan'])->name('insertpetakerawanan');
+    Route::get('/editpetakerawanan/{id}', [UIGuruController::class, 'editpetakerawanan'])->name('editpetakerawanan');
+    Route::post('/updatepetakerawanan/{id}', [UIGuruController::class, 'updatepetakerawanan'])->name('updatepetakerawanan');
+    Route::get('/hapuspetakerawanan/{id}', [UIGuruController::class, 'hapuspetakerawanan'])->name('hapuspetakerawanan');
+    Route::get('/exportpdf', [UIGuruController::class, 'exportpdf'])->name('exportpdf');
 
     //Bimbingan Karir Pages
     Route::get('/bimbingankarir', [UIGuruController::class, 'bimkarir'])->name('bimkarir');

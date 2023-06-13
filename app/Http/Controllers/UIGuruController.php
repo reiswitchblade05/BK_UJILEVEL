@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\BimbinganPribadi;
-use App\Models\BimbinganSosial;
-use App\Models\BimbinganKarir;
-use App\Models\BimbinganPelajar;
-use App\Models\Murid;
 use App\Models\Kelas;
+use App\Models\Murid;
+use App\Models\Pelanggaran;
+use Illuminate\Http\Request;
+use App\Models\PetaKerawanan;
+use App\Models\BimbinganKarir;
+use App\Models\BimbinganSosial;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\BimbinganPelajar;
+use App\Models\BimbinganPribadi;
 
 class UIGuruController extends Controller
 {
@@ -179,11 +182,6 @@ class UIGuruController extends Controller
         return redirect()->route('bimsosial')->with('success', 'Data berhasil dihapuskan!');
     }
 
-    public function petakerawanan()
-    {
-        return view('dashboard.guru.petakerawanan');
-    }
-
     public function bimpelajar()
     {
         $data = BimbinganPelajar::all();
@@ -232,5 +230,54 @@ class UIGuruController extends Controller
         $row = BimbinganPelajar::find($id);
         $row->delete();
         return redirect()->route('bimpelajar')->with('success', 'Data berhasil dihapuskan!');
+    }
+
+    public function petakerawanan()
+    {
+        $data = PetaKerawanan::all();
+        return view('dashboard.guru.petakerawanan', compact('data'));
+    }
+
+    public function tambahpetakerawanan()
+    {
+        $data = Murid::all();
+        $dataa = Pelanggaran::all();
+        return view('dashboard.guru.tambahpetakerawanan', compact('data', 'dataa'));
+    }
+
+    public function insertpetakerawanan(Request $request)
+    {
+        PetaKerawanan::create($request->all());
+        return redirect()->route('petakerawanan')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function editpetakerawanan($id)
+    {
+        $data = PetaKerawanan::find($id);
+        $dataa = Pelanggaran::all();
+        // dd($data);
+        return view('dashboard.guru.editpetakerawanan', compact('data', 'dataa'));
+    }
+
+    public function updatepetakerawanan(Request $request, $id)
+    {
+        $data = PetaKerawanan::find($id);
+        $data->update($request->all());
+        return redirect()->route('petakerawanan')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapuspetakerawanan(Request $request, $id)
+    {
+        $row = PetaKerawanan::find($id);
+        $row->delete();
+        return redirect()->route('petakerawanan')->with('success', 'Data berhasil dihapuskan!');
+    }
+
+    public function exportpdf()
+    {
+        $data = PetaKerawanan::all();
+        view()->share('data', $data);
+        $pdf = Pdf::loadView('dashboard.guru.petakerawananpdf', ['data' => $data]);
+        return $pdf->download('petakerawanan.pdf');
     }
 }

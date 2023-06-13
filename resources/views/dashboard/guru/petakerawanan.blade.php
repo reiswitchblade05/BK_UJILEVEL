@@ -214,7 +214,91 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
+                        <div class="row">
+                            <style>
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 96px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
 
+                                .btn-edit {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 50px;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+
+                                .btn-delete {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    border: none;
+                                    width: 66px;
+                                    color: #fff;
+                                    background-color: #d00f0f;
+                                }
+
+                                .Selesai {
+                                    color: #fff;
+                                    background-color: green;
+                                }
+
+                                .Diproses {
+                                    color: #fff;
+                                    background-color: #ff6600;
+                                }
+                            </style>
+                            <!-- ============================================================== -->
+                            <!-- basic table  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Tabel Peta Kerawanan</h5>
+                                    @if ($message = Session::get('success'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @endif
+                                    <div class="card-body">
+                                        <button class="btn-tambah"><a href="{{ url('tambahpetakerawanan') }}" style="color: #fff;">Tambah</a></button> <button class="btn-tambah"><a href="/exportpdf" style="color: #fff;">Export PDF</a></button>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered first">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Nama Murid</th>
+                                                        <th>Pelanggaran</th>
+                                                        <th>Misc.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @php
+                                                    $no = 1;
+                                                    @endphp
+                                                    @foreach ($data as $row)
+                                                    <tr>
+                                                        <td>{{ $no++ }}</td>
+                                                        <td>{{ $row->nama_siswa }}</td>
+                                                        <td>{{ $row->pelanggaran }}</td>
+                                                        <td>
+                                                            <button class="btn-edit"><a href="/editpetakerawanan/{{ $row->id }}" style="color: #fff;">Edit</a></button>
+                                                            <button class="btn-delete"><a href="/hapuspetakerawanan/{{ $row->id }}" style="color: #fff;">Delete</a></button>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div style="padding-bottom: 20vw;">
