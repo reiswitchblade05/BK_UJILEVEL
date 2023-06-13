@@ -265,7 +265,7 @@
                                                         <th>Nama Murid</th>
                                                         <th>Jadwal Bimbingan</th>
                                                         <th>Jadwal Sosialisasi</th>
-                                                        <th>Cita-Cita</th>
+                                                        <th>Karir</th>
                                                         <th>Status</th>
                                                         <th>Misc.</th>
                                                     </tr>
@@ -280,7 +280,7 @@
                                                         <td>{{ $row->nama_siswa }}</td>
                                                         <td>{{ $row->jadwal_bimbingan }}</td>
                                                         <td>{{ $row->jadwal_sosialisasi }}</td>
-                                                        <td>{{ $row->cita_cita }}</td>
+                                                        <td>{{ $row->karir }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>
                                                         <td>
                                                             <button class="btn-detail"><a href="/detailbimkarirwali/{{ $row->id }}" style="color: #fff;">More</a></button>

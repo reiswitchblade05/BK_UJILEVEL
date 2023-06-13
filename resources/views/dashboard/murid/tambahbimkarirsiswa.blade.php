@@ -250,7 +250,7 @@
                                                 </select>
                                                 <input name="jadwal_bimbingan" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                                 <div class="input-group mb-3 mt-3">
-                                                    <input type="text" name="cita_cita" placeholder="Cita-Cita" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                    <input type="text" name="karir" placeholder="Karir" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                                 </div>
                                                 <div class="form-group">
                                                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Alasan Siswa" name="alasan_siswa" rows="3"></textarea>
