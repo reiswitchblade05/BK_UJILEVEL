@@ -214,7 +214,7 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                    <div class="row">
+                            <div class="row">
                                 <style>
                                     .btn-edit {
                                         border-radius: 7px;

@@ -129,6 +129,15 @@ Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
     route::get('/bimsosialwali', [UIWaliKelasController::class, 'bimsosialwali'])->name('bimsosialwali');
     route::get('/detailbimsosialwali/{id}', [UIWaliKelasController::class, 'detailbimsosialwali'])->name('detailbimsosialwali');
 
+    //Peta Kerawanan Pages
+    Route::get('/petakerawananwali', [UIWaliKelasController::class, 'petakerawananwali'])->name('petakerawananwali');
+    Route::get('/tambahpetakerawananwali', [UIWaliKelasController::class, 'tambahpetakerawananwali'])->name('tambahpetakerawananwali');
+    Route::post('/insertpetakerawananwali', [UIWaliKelasController::class, 'insertpetakerawananwali'])->name('insertpetakerawananwali');
+    Route::get('/editpetakerawananwali/{id}', [UIWaliKelasController::class, 'editpetakerawananwali'])->name('editpetakerawananwali');
+    Route::post('/updatepetakerawananwali/{id}', [UIWaliKelasController::class, 'updatepetakerawananwali'])->name('updatepetakerawananwali');
+    Route::get('/hapuspetakerawananwali/{id}', [UIWaliKelasController::class, 'hapuspetakerawananwali'])->name('hapuspetakerawananwali');
+    Route::get('/exportpdfwali', [UIWaliKelasController::class, 'exportpdfwali'])->name('exportpdfwali');
+
     //Bimbingan Karir Pages
     route::get('/bimkarirwali', [UIWaliKelasController::class, 'bimkarirwali'])->name('bimkarirwali');
     route::get('/detailbimkarirwali/{id}', [UIWaliKelasController::class, 'detailbimkarirwali'])->name('detailbimkarirwali');

@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BimbinganPribadi;
 use App\Models\BimbinganSosial;
+use App\Models\PetaKerawanan;
 use App\Models\BimbinganKarir;
 use App\Models\BimbinganPelajar;
+use App\Models\Murid;
+use App\Models\Pelanggaran;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class UIWaliKelasController extends Controller
 {
@@ -51,6 +55,47 @@ class UIWaliKelasController extends Controller
         return view('dashboard.walikelas.detailbimkarirwali', compact('data'));
     }
 
+    public function petakerawananwali()
+    {
+        $data = PetaKerawanan::all();
+        return view('dashboard.walikelas.petakerawananwali', compact('data'));
+    }
+
+    public function tambahpetakerawananwali()
+    {
+        $data = Murid::all();
+        $dataa = Pelanggaran::all();
+        return view('dashboard.walikelas.tambahpetakerawananwali', compact('data', 'dataa'));
+    }
+
+    public function insertpetakerawananwali(Request $request)
+    {
+        PetaKerawanan::create($request->all());
+        return redirect()->route('petakerawananwali')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function editpetakerawananwali($id)
+    {
+        $data = PetaKerawanan::find($id);
+        $dataa = Pelanggaran::all();
+        // dd($data);
+        return view('dashboard.walikelas.editpetakerawananwali', compact('data', 'dataa'));
+    }
+
+    public function updatepetakerawananwali(Request $request, $id)
+    {
+        $data = PetaKerawanan::find($id);
+        $data->update($request->all());
+        return redirect()->route('petakerawananwali')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function hapuspetakerawananwali(Request $request, $id)
+    {
+        $row = PetaKerawanan::find($id);
+        $row->delete();
+        return redirect()->route('petakerawananwali')->with('success', 'Data berhasil dihapuskan!');
+    }
+
     public function bimpelajarwali()
     {
         $data = BimbinganPelajar::all();
@@ -78,5 +123,13 @@ class UIWaliKelasController extends Controller
             'tindak_lanjut' => $request->tindak_lanjut,
         ]);
         return redirect()->route('bimpelajarwali')->with('success', 'Data berhasil diperbarui!');
+    }
+
+    public function exportpdfwali()
+    {
+        $data = PetaKerawanan::all();
+        view()->share('data', $data);
+        $pdf = Pdf::loadView('dashboard.walikelas.petakerawananwalipdf', ['data' => $data]);
+        return $pdf->download('petakerawanan.pdf');
     }
 }
