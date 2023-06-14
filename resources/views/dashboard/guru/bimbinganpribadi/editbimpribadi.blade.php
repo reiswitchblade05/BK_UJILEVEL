@@ -254,11 +254,7 @@
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $data->tema_konseling }}" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
-                                            <input name="jadwal_konseling" value="{{ $data->jadwal_konseling }}" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
-                                            <select name="status" class="form-select w-100 p-2 mb-3 mt-3" aria-label="Default select example" disabled>
-                                                <option selected>{{ $data->status }}</option>
-                                                <option value="Diproses">Diproses</option>
-                                            </select>
+                                            <input name="jadwal_konseling" value="{{ $data->jadwal_konseling }}" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <button type="submit" class="btn-edit">Update Data</button> <button class="btn-back"><a href="{{ url('bimbinganpribadi') }}" style="color: #fff;">Kembali</a></button>
                                         </form>
                                     </div>

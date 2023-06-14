@@ -255,10 +255,6 @@
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
-                                            <select name="status" class="form-select w-100 p-2 mb-3" aria-label="Default select example" disabled>
-                                                <option selected>{{ $data->status }}</option>
-                                                <option value="Diproses">Diproses</option>
-                                            </select>
                                             <button type="submit" class="btn-tambah">Update Data</button> <button class="btn-back"><a href="{{ url('bimbingansosial') }}" style="color: #fff;">Kembali</a></button>
                                         </form>
                                     </div>

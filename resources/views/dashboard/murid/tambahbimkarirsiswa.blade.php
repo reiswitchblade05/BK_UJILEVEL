@@ -258,10 +258,6 @@
                                                 <div class="form-group">
                                                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tujuan Siswa" name="tujuan_siswa" rows="3"></textarea>
                                                 </div>
-                                                <select name="status" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                                    <option selected>Status</option>
-                                                    <option value="Diproses">Diproses</option>
-                                                </select>
                                                 <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimkarirsiswa') }}" style="color: #fff;">Kembali</a></button>
                                             </form>
                                         </div>

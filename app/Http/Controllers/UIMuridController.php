@@ -38,7 +38,13 @@ class UIMuridController extends Controller
 
     public function insertbimpribadisiswa(Request $request)
     {
-        BimbinganPribadi::create($request->all());
+        BimbinganPribadi::create([
+            'nama_siswa' => $request->nama_siswa,
+            'kelas' => $request->kelas,
+            'tema_konseling' => $request->tema_konseling,
+            'jadwal_konseling' => $request->jadwal_konseling,
+            'status' => 'Diproses',
+        ]);
         return redirect()->route('bimpribadisiswa')->with('success', 'Data berhasil ditambahkan!');
     }
 
@@ -64,7 +70,13 @@ class UIMuridController extends Controller
 
     public function insertbimsosialsiswa(Request $request)
     {
-        BimbinganSosial::create($request->all());
+        BimbinganSosial::create([
+            'nama_siswa' => $request->nama_siswa,
+            'kelas' => $request->kelas,
+            'jadwal_siswa' => $request->jadwal_siswa,
+            'konflik_permasalahan' => $request->konflik_permasalahan,
+            'status' => 'Diproses',
+        ]);
         return redirect()->route('bimsosialsiswa')->with('success', 'Data berhasil ditambahkan!');
     }
 
@@ -88,7 +100,14 @@ class UIMuridController extends Controller
 
     public function insertbimkarirsiswa(Request $request)
     {
-        BimbinganKarir::create($request->all());
+        BimbinganKarir::create([
+            'nama_siswa' => $request->nama_siswa,
+            'jadwal_bimbingan' => $request->jadwal_bimbingan,
+            'karir' => $request->karir,
+            'alasan_siswa' => $request->alasan_siswa,
+            'tujuan_siswa' => $request->tujuan_siswa,
+            'status' => 'Diproses',
+        ]);
         return redirect()->route('bimkarirsiswa')->with('success', 'Data berhasil ditambahkan!');
     }
 
@@ -113,7 +132,13 @@ class UIMuridController extends Controller
 
     public function insertbimpelajarsiswa(Request $request)
     {
-        BimbinganPelajar::create($request->all());
+        BimbinganPelajar::create([
+            'nama_siswa' => $request->nama_siswa,
+            'kelas' => $request->kelas,
+            'tema' => $request->tema,
+            'jadwal_siswa' => $request->jadwal_siswa,
+            'status' => 'Diproses',
+        ]);
         return redirect()->route('bimpelajarsiswa')->with('success', 'Data berhasil ditambahkan!');
     }
 }

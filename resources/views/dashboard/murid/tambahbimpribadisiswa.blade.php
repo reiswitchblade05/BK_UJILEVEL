@@ -257,11 +257,7 @@
                                             <div class="input-group mb-3">
                                                 <input type="text" name="tema_konseling" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
-                                            <input name="jadwal_konseling" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
-                                            <select name="status" class="form-select w-100 p-2 mb-3 mt-3" aria-label="Default select example">
-                                                <option selected>Status</option>
-                                                <option value="Diproses">Diproses</option>
-                                            </select>
+                                            <input name="jadwal_konseling" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimpribadisiswa') }}" style="color: #fff;">Kembali</a></button>
                                         </form>
                                     </div>

@@ -263,10 +263,10 @@
                                                 <input type="text" value="{{ $data->status }}" name="status" placeholder="Status" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Hasil" name="hasil" rows="3" disabled>{{ $data->hasil }}</textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" name="hasil" rows="3" disabled>{{ $data->hasil }}</textarea>
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tindak Lanjut" name="tindak_lanjut" rows="3" disabled>{{ $data->tindak_lanjut }}</textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" name="tindak_lanjut" rows="3" disabled>{{ $data->tindak_lanjut }}</textarea>
                                             </div>
                                             <button class="btn-back"><a href="{{ url('bimbingankarir') }}" style="color: #fff;">Kembali</a></button>
                                         </form>

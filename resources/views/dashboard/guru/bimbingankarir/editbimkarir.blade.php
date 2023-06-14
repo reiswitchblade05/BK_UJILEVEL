@@ -259,9 +259,6 @@
                                             <div class="form-group">
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tujuan Siswa" name="tujuan_siswa" rows="3" disabled>{{ $data->tujuan_siswa }}</textarea>
                                             </div>
-                                            <div class="input-group mb-3 mt-3">
-                                                <input type="text" value="{{ $data->status }}" name="status" placeholder="Status" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
-                                            </div>
                                             <button type="submit" class="btn-edit">Update Data</button><button class="btn-back"><a href="{{ url('bimkarirsiswa') }}" style="color: #fff;">Kembali</a></button>
                                         </form>
                                     </div>
