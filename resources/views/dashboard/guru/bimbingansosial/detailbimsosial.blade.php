@@ -238,9 +238,6 @@
                                             <div class="input-group mb-3">
                                                 <input type="text" value="{{ $data->nama_siswa}}" name="nama_siswa" placeholder="Nama Siswa" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                                             </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->kelas }}" name="kelas" placeholder="Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
-                                            </div>
                                             <input name="jadwal_siswa" value="{{ $data->jadwal_siswa }}" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;" disabled>
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>

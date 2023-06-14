@@ -248,12 +248,6 @@
                                                 <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
                                                 @endforeach
                                             </select>
-                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                                <option selected>Kelas</option>
-                                                @foreach($dataa as $kelas)
-                                                <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
-                                                @endforeach
-                                            </select>
                                             <input name="jadwal_siswa" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <div class="input-group mb-3">
                                                 <input type="text" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">

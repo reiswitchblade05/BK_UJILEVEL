@@ -253,7 +253,6 @@
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama Murid</th>
-                                                        <th>Kelas</th>
                                                         <th>Jadwal</th>
                                                         <th>Permasalahan</th>
                                                         <th>Status</th>
@@ -268,7 +267,6 @@
                                                     <tr>
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $row->nama_siswa }}</td>
-                                                        <td>{{ $row->kelas }}</td>
                                                         <td>{{ $row->jadwal_siswa }}</td>
                                                         <td>{{ $row->konflik_permasalahan }}</td>
                                                         <td class="{{ $row->status }}">{{ $row->status }}</td>

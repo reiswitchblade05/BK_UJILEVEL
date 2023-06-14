@@ -248,12 +248,6 @@
                                                     <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
                                                 @endforeach
                                             </select>
-                                            <select name="kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
-                                                <option selected>Kelas</option>
-                                                    @foreach($dataa as $kelas)
-                                                        <option value="{{ $kelas->nama_kelas }}">{{ $kelas->nama_kelas }}</option>
-                                                    @endforeach
-                                            </select>
                                             <div class="input-group mb-3">
                                                 <input type="text" name="tema" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>

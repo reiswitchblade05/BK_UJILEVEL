@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('bimbingan_pribadi', function (Blueprint $table) {
             $table->id();
             $table->string('nama_siswa');
-            $table->string('kelas');
             $table->string('tema_konseling');
             $table->dateTime('jadwal_konseling', $precision = 0);
             $table->enum('status', ['Diproses', 'Selesai']);

@@ -11,6 +11,6 @@ class BimbinganPelajar extends Model
     protected $table = "bimbingan_pelajar";
     protected $primaryKey = "id";
     protected $fillable = [
-        'nama_siswa', 'kelas', 'tema', 'jadwal_siswa', 'status', 'hasil', 'tindak_lanjut'
+        'nama_siswa', 'tema', 'jadwal_siswa', 'status', 'hasil', 'tindak_lanjut'
     ];
 }

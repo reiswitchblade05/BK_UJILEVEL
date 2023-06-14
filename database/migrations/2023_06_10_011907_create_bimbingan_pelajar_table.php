@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('bimbingan_pelajar', function (Blueprint $table) {
             $table->id();
             $table->string('nama_siswa');
-            $table->string('kelas');
             $table->string('tema');
             $table->dateTime('jadwal_siswa', $precision = 0);
             $table->enum('status', ['Diproses', 'Selesai']);

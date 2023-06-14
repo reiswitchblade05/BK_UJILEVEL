@@ -19,7 +19,7 @@ class UIMuridController extends Controller
 
     public function bimpribadisiswa()
     {
-        $data = BimbinganPribadi::with('siswa', 'kelas')->get();
+        $data = BimbinganPribadi::with('siswa')->get();
         return view('dashboard.murid.bimpribadisiswa', compact('data'));
     }
 
@@ -40,7 +40,6 @@ class UIMuridController extends Controller
     {
         BimbinganPribadi::create([
             'nama_siswa' => $request->nama_siswa,
-            'kelas' => $request->kelas,
             'tema_konseling' => $request->tema_konseling,
             'jadwal_konseling' => $request->jadwal_konseling,
             'status' => 'Diproses',
@@ -50,7 +49,7 @@ class UIMuridController extends Controller
 
     public function bimsosialsiswa()
     {
-        $data = BimbinganSosial::with('siswa', 'kelas')->get();
+        $data = BimbinganSosial::with('siswa')->get();
         return view('dashboard.murid.bimsosialsiswa', compact('data'));
     }
 
@@ -72,7 +71,6 @@ class UIMuridController extends Controller
     {
         BimbinganSosial::create([
             'nama_siswa' => $request->nama_siswa,
-            'kelas' => $request->kelas,
             'jadwal_siswa' => $request->jadwal_siswa,
             'konflik_permasalahan' => $request->konflik_permasalahan,
             'status' => 'Diproses',
