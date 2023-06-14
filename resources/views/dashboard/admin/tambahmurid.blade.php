@@ -171,6 +171,9 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ url('jeniskerawanan') }}"><i class="fa fa-fw fa-user-circle"></i>Jenis Kerawanan <span class="badge badge-success"></span></a>
+                            </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">
                                     {{ csrf_field() }}

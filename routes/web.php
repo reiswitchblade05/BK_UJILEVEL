@@ -67,6 +67,12 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     route::get('/editmurid/{id}', [UIController::class, 'editmurid'])->name('editmurid');
     route::post('/updatemurid/{id}', [UIController::class, 'updatemurid'])->name('updatemurid');
     route::get('/hapusmurid/{id}', [UIController::class, 'hapusmurid'])->name('hapusmurid');
+
+    //Jenis Kerawanan Pages
+    route::get('/jeniskerawanan', [UIController::class, 'jeniskerawanan'])->name('jeniskerawanan');
+    route::get('/tambahjeniskerawanan', [UIController::class, 'tambahjeniskerawanan'])->name('tambahjeniskerawanan');
+    route::post('/insertjeniskerawanan', [UIController::class, 'insertjeniskerawanan'])->name('insertjeniskerawanan');
+    route::get('/hapusjeniskerawanan/{id}', [UIController::class, 'hapusjeniskerawanan'])->name('hapusjeniskerawanan');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {

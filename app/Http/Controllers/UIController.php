@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Murid;
 use App\Models\Guru;
 use App\Models\Kelas;
+use App\Models\Pelanggaran;
 use App\Models\Walikelas;
 use Illuminate\Support\Facades\Hash;
 
@@ -26,7 +27,6 @@ class UIController extends Controller
 
     public function tambahkelas()
     {
-
         return view('dashboard.admin.tambahkelas');
     }
 
@@ -290,5 +290,29 @@ class UIController extends Controller
         $data->delete();
         $dataa->delete();
         return redirect()->route('muridadmin')->with('success', 'Data berhasil dihapuskan!');
+    }
+
+    public function jeniskerawanan()
+    {
+        $data = Pelanggaran::all();
+        return view('dashboard.admin.jeniskerawanan', compact('data'));
+    }
+
+    public function tambahjeniskerawanan()
+    {
+        return view('dashboard.admin.tambahjeniskerawanan');
+    }
+
+    public function insertjeniskerawanan(Request $request)
+    {
+        Pelanggaran::create($request->all());
+        return redirect()->route('jeniskerawanan')->with('success', 'Data berhasil ditambahkan!');
+    }
+
+    public function hapusjeniskerawanan(Request $request, $id)
+    {
+        $row = Pelanggaran::find($id);
+        $row->delete();
+        return redirect()->route('jeniskerawanan')->with('success', 'Data berhasil dihapuskan!');
     }
 }

@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html"><img src="assets-admin/images/logo.png" alt="" style="width: 135px;"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="assets-admin/images/logo.png" alt="" style="width: 135px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -49,8 +49,7 @@
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-22.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy
-                                                            Rakestraw</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -58,8 +57,7 @@
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-33.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is
-                                                        now following you
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
                                                 </div>
@@ -67,8 +65,7 @@
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-44.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is
-                                                        watching your main repository
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -76,8 +73,7 @@
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets-admin/images/avatar-55.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica
-                                                            Caruso</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -123,7 +119,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expand-admined="false"><img src="assets-admin/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets-admin/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Admin</h5>
@@ -169,10 +165,10 @@
                                 <a class="nav-link" href="{{ url('guruadmin') }}"><i class="fas fa-users"></i>Guru</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
+                                <a class="nav-link" href="{{ url('muridadmin') }}"><i class=" fas fa-user" style="padding-right: 3px;"></i>Murid</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{ url('jeniskerawanan') }}"><i class="fa fa-fw fa-user-circle"></i>Jenis Kerawanan <span class="badge badge-success"></span></a>
+                                <a class="nav-link active" href="{{ url('jeniskerawanan') }}"><i class="fa fa-fw fa-user-circle"></i>Jenis Kerawanan <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <form id="logout-form" action="{{ url('logout') }}" method="GET">
@@ -200,15 +196,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Murid </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus
-                                    vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <h2 class="pageheader-title">Jenis Kerawanan </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin</a>
-                                            </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Murid</li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Admin BK</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Jenis Kerawanan</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -220,34 +214,26 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                        <div class="row">
+                    <div class="row">
                             <style>
                                 .btn-tambah {
                                     border-radius: 7px;
                                     padding: 7px;
                                     margin-bottom: 1.4vw;
-                                    width: 96px;
+                                    width: 110px;
                                     border: none;
                                     color: #fff;
                                     background-color: #1d3988;
                                 }
 
-                                .btn-edit {
+                                .btn-back {
                                     border-radius: 7px;
                                     padding: 7px;
                                     border: none;
-                                    width: 55px;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
                                     color: #fff;
                                     background-color: #1d3988;
-                                }
-
-                                .btn-delete {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 66px;
-                                    color: #fff;
-                                    background-color: #d00f0f;
                                 }
                             </style>
                             <!-- ============================================================== -->
@@ -255,87 +241,58 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Murid</h5>
-                                    @if ($message = Session::get('success'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @endif
+                                    <h5 class="card-header">Tambah Kelas</h5>
                                     <div class="card-body">
-                                        <button class="btn-tambah"> <a href="{{ url('tambahmurid') }}" style="color: #fff;">Tambah</a> </button>
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-bordered first">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No.</th>
-                                                        <th>Nama Murid</th>
-                                                        <th>Kelas</th>
-                                                        <th>Jenis Kelamin</th>
-                                                        <th>NISN</th>
-                                                        <th>Misc.</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @php
-                                                    $no = 1;
-                                                    @endphp
-                                                    @foreach ($data as $row)
-                                                    <tr>
-                                                        <td>{{ $no++ }}</td>
-                                                        <td>{{ $row->nama_siswa }}</td>
-                                                        <td>{{ $row->kelas }}</td>
-                                                        <td>{{ $row->jenis_kelamin }}</td>
-                                                        <td>{{ $row->nisn }}</td>
-                                                        <td>
-                                                            <button class="btn-edit"><a href="/editmurid/{{ $row->id }}" style="color: #fff;">Edit</a></button>
-                                                            <button class="btn-delete"><a href="/hapusmurid/{{ $row->id }}" style="color: #fff;">Delete</a></button>
-                                                        </td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <form action="{{ url('insertjeniskerawanan') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="nama_pelanggaran" placeholder="Nama Pelanggaran" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('jeniskerawanan') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div style="padding-bottom: 20vw;">
-                    <!-- ============================================================== -->
-                    <!-- footer -->
-                    <!-- ============================================================== -->
-
-                    <!-- ============================================================== -->
-                    <!-- end footer -->
-                    <!-- ============================================================== -->
+                    </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- end wrapper  -->
-                <!-- ============================================================== -->
-            </div>
+            </div style="padding-bottom: 20vw;">
             <!-- ============================================================== -->
-            <!-- end main wrapper  -->
+            <!-- footer -->
             <!-- ============================================================== -->
-            <!-- Optional JavaScript -->
-            <!-- jquery 3.3.1 -->
-            <script src="{{ asset('/assets-admin/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
-            <!-- bootstap bundle js -->
-            <script src="{{ asset('/assets-admin/vendor/bootstrap/js/bootstrap.bundle.js') }}"></script>
-            <!-- slimscroll js -->
-            <script src="{{ asset('/assets-admin/vendor/slimscroll/jquery.slimscroll.js') }}"></script>
-            <!-- main js -->
-            <script src="{{ asset('/assets-admin/libs/js/main-js.js') }}"></script>
-            <!-- chart chartist js -->
-            <script src="{{ asset('/assets-admin/vendor/charts/chartist-bundle/chartist.min.js') }}"></script>
-            <!-- sparkline js -->
-            <script src="{{ asset('/assets-admin/vendor/charts/sparkline/jquery.sparkline.js') }}"></script>
-            <!-- morris js -->
-            <script src="{{ asset('/assets-admin/vendor/charts/morris-bundle/raphael.min.js') }}"></script>
-            <script src="{{ asset('/assets-admin/vendor/charts/morris-bundle/morris.js') }}"></script>
-            <!-- chart c3 js -->
-            <script src="{{ asset('/assets-admin/vendor/charts/c3charts/c3.min.js') }}"></script>
-            <script src="{{ asset('/assets-admin/vendor/charts/c3charts/d3-5.4.0.min.js') }}"></script>
-            <script src="{{ asset('/assets-admin/vendor/charts/c3charts/C3chartjs.js') }}"></script>
-            <script src="{{ asset('/assets-admin/libs/js/dashboard-ecommerce.js') }}"></script>
+
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="assets-admin/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="assets-admin/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="assets-admin/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="assets-admin/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="assets-admin/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="assets-admin/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="assets-admin/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="assets-admin/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="assets-admin/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="assets-admin/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="assets-admin/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="assets-admin/libs/js/dashboard-ecommerce.js"></script>
 </body>
 
 </html>
