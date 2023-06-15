@@ -81,6 +81,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     //Bimbingan Pribadi Pages
     Route::get('/bimbinganpribadi', [UIGuruController::class, 'bimpribadi'])->name('bimpribadi');
     Route::get('/detailbimpribadi/{id}', [UIGuruController::class, 'detailbimpribadi'])->name('detailbimpribadi');
+    Route::get('/tambahbimpribadi', [UIGuruController::class, 'tambahbimpribadi'])->name('tambahbimpribadi');
+    Route::post('/insertbimpribadi', [UIGuruController::class, 'insertbimpribadi'])->name('insertbimpribadi');
     Route::get('/editbimpribadi/{id}', [UIGuruController::class, 'editbimpribadi'])->name('editbimpribadi');
     Route::post('/updatebimpribadi/{id}', [UIGuruController::class, 'updatebimpribadi'])->name('updatebimpribadi');
     Route::get('/tambahhasilpribadi/{id}', [UIGuruController::class, 'tambahhasilpribadi'])->name('tambahhasilpribadi');
@@ -90,6 +92,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     //Bimbingan Sosial Pages
     Route::get('/bimbingansosial', [UIGuruController::class, 'bimsosial'])->name('bimsosial');
     Route::get('/detailbimsosial/{id}', [UIGuruController::class, 'detailbimsosial'])->name('detailbimsosial');
+    Route::get('/tambahbimsosial', [UIGuruController::class, 'tambahbimsosial'])->name('tambahbimsosial');
+    Route::post('/insertbimsosial', [UIGuruController::class, 'insertbimsosial'])->name('insertbimsosial');
     Route::get('/editbimsosial/{id}', [UIGuruController::class, 'editbimsosial'])->name('editbimsosial');
     Route::post('/updatebimsosial/{id}', [UIGuruController::class, 'updatebimsosial'])->name('updatebimsosial');
     Route::get('/tambahhasilsosial/{id}', [UIGuruController::class, 'tambahhasilsosial'])->name('tambahhasilsosial');
@@ -108,6 +112,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     //Bimbingan Karir Pages
     Route::get('/bimbingankarir', [UIGuruController::class, 'bimkarir'])->name('bimkarir');
     Route::get('/detailbimkarir/{id}', [UIGuruController::class, 'detailbimkarir'])->name('detailbimkarir');
+    Route::get('/tambahbimkarir', [UIGuruController::class, 'tambahbimkarir'])->name('tambahbimkarir');
+    Route::post('/insertbimkarir', [UIGuruController::class, 'insertbimkarir'])->name('insertbimkarir');
     Route::get('/editbimkarir/{id}', [UIGuruController::class, 'editbimkarir'])->name('editbimkarir');
     Route::post('/updatebimkarir/{id}', [UIGuruController::class, 'updatebimkarir'])->name('updatebimkarir');
     Route::get('/tambahhasilkarir/{id}', [UIGuruController::class, 'tambahhasilkarir'])->name('tambahhasilkarir');
@@ -117,6 +123,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     //Bimbingan Pelajar Pages
     Route::get('/bimbinganpelajar', [UIGuruController::class, 'bimpelajar'])->name('bimpelajar');
     Route::get('/detailbimpelajar/{id}', [UIGuruController::class, 'detailbimpelajar'])->name('detailbimpelajar');
+    Route::get('/tambahbimpelajar', [UIGuruController::class, 'tambahbimpelajar'])->name('tambahbimpelajar');
+    Route::post('/insertbimpelajar', [UIGuruController::class, 'insertbimpelajar'])->name('insertbimpelajar');
     Route::get('/editbimpelajar/{id}', [UIGuruController::class, 'editbimpelajar'])->name('editbimpelajar');
     Route::post('/updatebimpelajar/{id}', [UIGuruController::class, 'updatebimpelajar'])->name('updatebimpelajar');
     Route::get('/tambahhasilpelajar/{id}', [UIGuruController::class, 'tambahhasilpelajar'])->name('tambahhasilpelajar');

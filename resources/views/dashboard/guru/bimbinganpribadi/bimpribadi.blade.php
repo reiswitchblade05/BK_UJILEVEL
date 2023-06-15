@@ -225,6 +225,16 @@
                                     background-color: #00698e;
                                 }
 
+                                .btn-tambah {
+                                    border-radius: 7px;
+                                    padding: 7px;
+                                    margin-bottom: 1.4vw;
+                                    width: 96px;
+                                    border: none;
+                                    color: #fff;
+                                    background-color: #1d3988;
+                                }
+
                                 .btn-edit {
                                     border-radius: 7px;
                                     padding: 7px;
@@ -274,7 +284,7 @@
                                     </div>
                                     @endif
                                     <div class="card-body">
-                                        <!-- <button class="btn-tambah"> <a href="{{ url('tambahbimpribadi') }}" style="color: #fff;">Tambah</a> </button> -->
+                                        <button class="btn-tambah"> <a href="{{ url('tambahbimpribadi') }}" style="color: #fff;">Tambah</a></button>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered first">
                                                 <thead>

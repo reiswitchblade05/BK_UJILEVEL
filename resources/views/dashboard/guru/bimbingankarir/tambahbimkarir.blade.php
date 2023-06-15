@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="dashboard.html"><img src="assets-guru/images/logo.png" alt="" style="width: 135px;"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="{{asset('assets-guru/images/logo.png')}}" alt="" style="width: 135px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -119,7 +119,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets-guru/images/avatar-admin.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets-guru/images/avatar-admin.jpg')}}" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Guru</h5>
@@ -216,60 +216,24 @@
 
                         <div class="row">
                             <style>
-                                .btn-detail {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 50px;
-                                    color: #fff;
-                                    background-color: #00698e;
-                                }
-
                                 .btn-tambah {
                                     border-radius: 7px;
                                     padding: 7px;
                                     margin-bottom: 1.4vw;
-                                    width: 96px;
+                                    width: 110px;
                                     border: none;
                                     color: #fff;
                                     background-color: #1d3988;
                                 }
 
-                                .btn-edit {
+                                .btn-back {
                                     border-radius: 7px;
                                     padding: 7px;
                                     border: none;
-                                    width: 50px;
+                                    margin-left: 0.5vw;
+                                    width: 75px;
                                     color: #fff;
                                     background-color: #1d3988;
-                                }
-
-                                .btn-input {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 55px;
-                                    color: #fff;
-                                    background-color: #f27f0c;
-                                }
-
-                                .btn-delete {
-                                    border-radius: 7px;
-                                    padding: 7px;
-                                    border: none;
-                                    width: 66px;
-                                    color: #fff;
-                                    background-color: #d00f0f;
-                                }
-
-                                .Selesai {
-                                    color: #fff;
-                                    background-color: green;
-                                }
-
-                                .Diproses {
-                                    color: #fff;
-                                    background-color: #ff6600;
                                 }
                             </style>
                             <!-- ============================================================== -->
@@ -277,50 +241,28 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tabel Bimbingan Karir</h5>
-                                    @if ($message = Session::get('success'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @endif
+                                    <h5 class="card-header">Insert Bimbingan Pelajar</h5>
                                     <div class="card-body">
-                                        <button class="btn-tambah"> <a href="{{ url('tambahbimkarir') }}" style="color: #fff;">Tambah</a></button>
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-bordered first">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No.</th>
-                                                        <th>Nama Murid</th>
-                                                        <th>Jadwal Bimbingan</th>
-                                                        <th>Jadwal Sosialisasi</th>
-                                                        <th>Karir</th>
-                                                        <th>Status</th>
-                                                        <th>Misc.</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @php
-                                                    $no = 1;
-                                                    @endphp
-                                                    @foreach ($data as $row)
-                                                    <tr>
-                                                        <td>{{ $no++ }}</td>
-                                                        <td>{{ $row->nama_siswa }}</td>
-                                                        <td>{{ $row->jadwal_bimbingan }}</td>
-                                                        <td>{{ $row->jadwal_sosialisasi }}</td>
-                                                        <td>{{ $row->karir }}</td>
-                                                        <td class="{{ $row->status }}">{{ $row->status }}</td>
-                                                        <td>
-                                                            <button class="btn-detail"><a href="/detailbimkarir/{{ $row->id }}" style="color: #fff;">More</a></button>
-                                                            <button class="btn-edit"><a href="/editbimkarir/{{ $row->id }}" style="color: #fff;">Edit</a></button>
-                                                            <button class="btn-input"><a href="/tambahhasilkarir/{{ $row->id }}" style="color: #fff;">Hasil</a></button>
-                                                            <button class="btn-delete"><a href="/hapusbimkarir/{{ $row->id }}" style="color: #fff;">Delete</a></button>
-                                                        </td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <form action="{{ url('insertbimkarir') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <select name="nama_siswa" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Nama Siswa</option>
+                                                @foreach($data as $murid)
+                                                <option value="{{ $murid->nama_siswa }}">{{ $murid->nama_siswa }}</option>
+                                                @endforeach
+                                            </select>
+                                            <input name="jadwal_bimbingan" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                            <div class="input-group mb-3 mt-3">
+                                                <input type="text" name="karir" placeholder="Karir" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Alasan Siswa" name="alasan_siswa" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tujuan Siswa" name="tujuan_siswa" rows="3"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimkarir') }}" style="color: #fff;">Kembali</a></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

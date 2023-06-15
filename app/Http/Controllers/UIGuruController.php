@@ -32,6 +32,25 @@ class UIGuruController extends Controller
         return view('dashboard.guru.bimbingankarir.detailbimkarir', compact('data'));
     }
 
+    public function tambahbimkarir()
+    {
+        $data = Murid::all();
+        return view('dashboard.guru.bimbingankarir.tambahbimkarir', compact('data'));
+    }
+
+    public function insertbimkarir(Request $request)
+    {
+        BimbinganKarir::create([
+            'nama_siswa' => $request->nama_siswa,
+            'jadwal_bimbingan' => $request->jadwal_bimbingan,
+            'karir' => $request->karir,
+            'alasan_siswa' => $request->alasan_siswa,
+            'tujuan_siswa' => $request->tujuan_siswa,
+            'status' => 'Diproses',
+        ]);
+        return redirect()->route('bimkarir')->with('success', 'Data berhasil ditambahkan!');
+    }
+
     public function editbimkarir($id)
     {
         $data = BimbinganKarir::find($id);
@@ -76,17 +95,6 @@ class UIGuruController extends Controller
         return view('dashboard.guru.bimbinganpribadi.bimpribadi', compact('data'));
     }
 
-    public function tambahbimpribadi()
-    {
-        return view('dashboard.guru.bimbinganpribadi.tambahbimpribadi');
-    }
-
-    public function insertbimpribadi(Request $request)
-    {
-        BimbinganPribadi::create($request->all());
-        return redirect()->route('bimpribadi')->with('success', 'Data berhasil ditambahkan!');
-    }
-
     public function tambahhasilpribadi($id)
     {
         $data = BimbinganPribadi::find($id);
@@ -108,6 +116,24 @@ class UIGuruController extends Controller
     {
         $data = BimbinganPribadi::find($id);
         return view('dashboard.guru.bimbinganpribadi.detailbimpribadi', compact('data'));
+    }
+
+    public function tambahbimpribadi()
+    {
+        $data = Murid::all();
+        $dataa = Kelas::all();
+        return view('dashboard.guru.bimbinganpribadi.tambahbimpribadi', compact('data', 'dataa'));
+    }
+
+    public function insertbimpribadi(Request $request)
+    {
+        BimbinganPribadi::create([
+            'nama_siswa' => $request->nama_siswa,
+            'tema_konseling' => $request->tema_konseling,
+            'jadwal_konseling' => $request->jadwal_konseling,
+            'status' => 'Diproses',
+        ]);
+        return redirect()->route('bimpribadi')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function editbimpribadi($id)
@@ -143,6 +169,23 @@ class UIGuruController extends Controller
         return view('dashboard.guru.bimbingansosial.detailbimsosial', compact('data'));
     }
 
+    public function tambahbimsosial()
+    {
+        $data = Murid::all();
+        $dataa = Kelas::all();
+        return view('dashboard.guru.bimbingansosial.tambahbimsosial', compact('data', 'dataa'));
+    }
+
+    public function insertbimsosial(Request $request)
+    {
+        BimbinganSosial::create([
+            'nama_siswa' => $request->nama_siswa,
+            'jadwal_siswa' => $request->jadwal_siswa,
+            'konflik_permasalahan' => $request->konflik_permasalahan,
+            'status' => 'Diproses',
+        ]);
+        return redirect()->route('bimsosial')->with('success', 'Data berhasil ditambahkan!');
+    }
 
     public function editbimsosial($id)
     {
@@ -192,6 +235,25 @@ class UIGuruController extends Controller
     {
         $data = BimbinganPelajar::find($id);
         return view('dashboard.guru.bimbinganpelajar.detailbimpelajar', compact('data'));
+    }
+
+    public function tambahbimpelajar()
+    {
+        $data = Murid::all();
+        $dataa = Kelas::all();
+        return view('dashboard.guru.bimbinganpelajar.tambahbimpelajar', compact('data', 'dataa'));
+    }
+
+    public function insertbimpelajar(Request $request)
+    {
+        BimbinganPelajar::create([
+            'nama_siswa' => $request->nama_siswa,
+            'kelas' => $request->kelas,
+            'tema' => $request->tema,
+            'jadwal_siswa' => $request->jadwal_siswa,
+            'status' => 'Diproses',
+        ]);
+        return redirect()->route('bimpelajar')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function editbimpelajar($id)
