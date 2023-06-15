@@ -250,7 +250,7 @@
                                             </select>
                                             <input name="jadwal_siswa" value="{{ $data->jadwal_siswa }}" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                                             </div>
                                             <button type="submit" class="btn-tambah">Update Data</button> <button class="btn-back"><a href="{{ url('bimbingansosial') }}" style="color: #fff;">Kembali</a></button>
                                         </form>

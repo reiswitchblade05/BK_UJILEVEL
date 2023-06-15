@@ -249,7 +249,7 @@
                                                 <option value="{{ $data->nama_siswa }}">{{ $data->nama_siswa }}</option>
                                             </select>
                                             <div class="input-group mb-3">
-                                                <input type="text" value="{{ $data->tema }}" name="tema" placeholder="Tema" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                                <input type="text" value="{{ $data->tema }}" name="tema" placeholder="Tema" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                                             </div>
                                             <input name="jadwal_siswa" value="{{ $data->jadwal_siswa }}" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             
