@@ -21,13 +21,15 @@ class UIController extends Controller
 
     public function kelasadmin()
     {
-        $row = Kelas::with('guru', 'waliKelas')->get();
+        $row = Kelas::all();
         return view('dashboard.admin.kelasadmin', compact('row'));
     }
 
     public function tambahkelas()
     {
-        return view('dashboard.admin.tambahkelas');
+        $row = Guru::all();
+        $rowe = Walikelas::all();
+        return view('dashboard.admin.tambahkelas', compact('row', 'rowe'));
     }
 
     public function insertkelas(Request $request)
@@ -39,7 +41,9 @@ class UIController extends Controller
     public function editkelas($id)
     {
         $row = Kelas::find($id);
-        return view('dashboard.admin.editkelas', compact('row'));
+        $rowe = Guru::all();
+        $rowee = Walikelas::all();
+        return view('dashboard.admin.editkelas', compact('row', 'rowe', 'rowee'));
     }
 
     public function updatekelas(Request $request, $id)

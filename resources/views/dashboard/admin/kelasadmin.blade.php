@@ -286,8 +286,8 @@
                                                     <tr>
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $data->nama_kelas }}</td>
-                                                        <td>{{ $data->guru->nama_guru }}</td>
-                                                        <td>{{ $data->waliKelas->nama_guru }}</td>
+                                                        <td>{{ $data->guru_bk}}</td>
+                                                        <td>{{ $data->wali_kelas }}</td>
                                                         <td>
                                                             <button class="btn-edit"><a href="/editkelas/{{ $data->id }}" style="color: #fff;">Edit</a></button>
                                                             <button class="btn-delete"><a href="/hapuskelas/{{ $data->id }}" style="color: #fff;">Delete</a></button>

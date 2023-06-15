@@ -254,12 +254,18 @@
                                             <div class="input-group mb-3">
                                                 <input type="text" name="nama_kelas" placeholder="Nama Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="guru_bk" placeholder="Guru BK" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="wali_kelas" placeholder="Wali Kelas" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                            </div>
+                                            <select name="guru_bk" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Nama Guru</option>
+                                                    @foreach($row as $guru)
+                                                        <option value="{{ $guru->nama_guru }}">{{ $guru->nama_guru }}</option>
+                                                    @endforeach
+                                            </select>
+                                            <select name="wali_kelas" class="form-select w-100 p-2 mb-3" aria-label="Default select example">
+                                                <option selected>Nama Wali Kelas</option>
+                                                    @foreach($rowe as $wali)
+                                                        <option value="{{ $wali->nama_guru }}">{{ $wali->nama_guru }}</option>
+                                                    @endforeach
+                                            </select>
                                             <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('kelasadmin') }}" style="color: #fff;">Kembali</a></button>
                                         </form>
                                     </div>

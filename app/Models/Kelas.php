@@ -14,14 +14,4 @@ class Kelas extends Model
     protected $fillable = [
         'nama_kelas', 'guru_bk', 'wali_kelas'
     ];
-
-    public function guru()
-    {
-        return $this->belongsTo(Guru::class, 'guru_bk');
-    }
-    
-    public function waliKelas()
-    {
-        return $this->belongsTo(WaliKelas::class, 'wali_kelas');
-    }
 }

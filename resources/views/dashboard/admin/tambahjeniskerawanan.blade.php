@@ -241,7 +241,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Tambah Kelas</h5>
+                                    <h5 class="card-header">Tambah Jenis Kerawanan</h5>
                                     <div class="card-body">
                                         <form action="{{ url('insertjeniskerawanan') }}" method="POST" enctype="multipart/form-data">
                                             @csrf

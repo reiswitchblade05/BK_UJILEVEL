@@ -17,8 +17,8 @@ class KelasSeeder extends Seeder
     {
         DB::table('kelas')->insert([
             'nama_kelas' => 'XI PPLG 1',
-            'guru_bk' => '1',
-            'wali_kelas' => '1',
+            'guru_bk' => 'Pak Ricky',
+            'wali_kelas' => 'Pak Erraldo',
         ]);
     }
 }
