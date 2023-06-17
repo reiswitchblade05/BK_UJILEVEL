@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\BimbinganPribadi;
-use App\Models\BimbinganSosial;
-use App\Models\PetaKerawanan;
-use App\Models\BimbinganKarir;
-use App\Models\BimbinganPelajar;
 use App\Models\Murid;
 use App\Models\Pelanggaran;
+use Illuminate\Http\Request;
+use App\Models\PetaKerawanan;
+use App\Models\BimbinganKarir;
+use App\Models\BimbinganSosial;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\BimbinganPelajar;
+use App\Models\BimbinganPribadi;
+use App\Exports\PetaKerawananExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UIWaliKelasController extends Controller
 {
@@ -131,5 +133,10 @@ class UIWaliKelasController extends Controller
         view()->share('data', $data);
         $pdf = Pdf::loadView('dashboard.walikelas.petakerawananwalipdf', ['data' => $data]);
         return $pdf->download('petakerawanan.pdf');
+    }
+
+    public function exportexcelwali()
+    {
+        return Excel::download(new PetaKerawananExport, 'petakerawanan.xlsx');
     }
 }

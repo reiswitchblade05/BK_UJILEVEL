@@ -12,6 +12,8 @@ use App\Models\BimbinganSosial;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\BimbinganPelajar;
 use App\Models\BimbinganPribadi;
+use App\Exports\PetaKerawananExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UIGuruController extends Controller
 {
@@ -342,5 +344,10 @@ class UIGuruController extends Controller
         view()->share('data', $data);
         $pdf = Pdf::loadView('dashboard.guru.petakerawananpdf', ['data' => $data]);
         return $pdf->download('petakerawanan.pdf');
+    }
+
+    public function exportexcel()
+    {
+        return Excel::download(new PetaKerawananExport, 'petakerawanan.xlsx');
     }
 }

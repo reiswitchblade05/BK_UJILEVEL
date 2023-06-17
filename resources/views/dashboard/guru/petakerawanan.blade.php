@@ -266,7 +266,7 @@
                                     </div>
                                     @endif
                                     <div class="card-body">
-                                        <button class="btn-tambah"><a href="{{ url('tambahpetakerawanan') }}" style="color: #fff;">Tambah</a></button> <button class="btn-tambah"><a href="/exportpdf" style="color: #fff;">Export PDF</a></button>
+                                        <button class="btn-tambah" style="margin-right: 15px;"><a href="{{ url('tambahpetakerawanan') }}" style="color: #fff;">Tambah</a></button> <button class="btn-tambah"><a href="/exportpdf" style="color: #fff;">Export PDF</a></button> <button class="btn-tambah"><a href="/exportexcel" style="color: #fff;">Export Excel</a></button>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered first">
                                                 <thead>

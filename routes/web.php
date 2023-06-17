@@ -108,6 +108,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:guru']], function () {
     Route::post('/updatepetakerawanan/{id}', [UIGuruController::class, 'updatepetakerawanan'])->name('updatepetakerawanan');
     Route::get('/hapuspetakerawanan/{id}', [UIGuruController::class, 'hapuspetakerawanan'])->name('hapuspetakerawanan');
     Route::get('/exportpdf', [UIGuruController::class, 'exportpdf'])->name('exportpdf');
+    Route::get('/exportexcel', [UIGuruController::class, 'exportexcel'])->name('exportexcel');
 
     //Bimbingan Karir Pages
     Route::get('/bimbingankarir', [UIGuruController::class, 'bimkarir'])->name('bimkarir');
@@ -151,6 +152,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:walikelas']], function () {
     Route::post('/updatepetakerawananwali/{id}', [UIWaliKelasController::class, 'updatepetakerawananwali'])->name('updatepetakerawananwali');
     Route::get('/hapuspetakerawananwali/{id}', [UIWaliKelasController::class, 'hapuspetakerawananwali'])->name('hapuspetakerawananwali');
     Route::get('/exportpdfwali', [UIWaliKelasController::class, 'exportpdfwali'])->name('exportpdfwali');
+    Route::get('/exportexcelwali', [UIWaliKelasController::class, 'exportexcelwali'])->name('exportexcelwali');
 
     //Bimbingan Karir Pages
     route::get('/bimkarirwali', [UIWaliKelasController::class, 'bimkarirwali'])->name('bimkarirwali');
