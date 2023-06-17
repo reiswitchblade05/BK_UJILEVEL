@@ -242,6 +242,9 @@
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $data->konflik_permasalahan }}" name="konflik_permasalahan" placeholder="Tema Konseling" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                                             </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" name="komentar" rows="3" disabled>{{ $data->komentar }}</textarea>
+                                            </div>
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" value="{{ $data->status }}" name="status" placeholder="Status" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                                             </div>

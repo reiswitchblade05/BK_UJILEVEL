@@ -214,7 +214,7 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                    <div class="row">
+                        <div class="row">
                             <style>
                                 .btn-tambah {
                                     border-radius: 7px;
@@ -254,6 +254,9 @@
                                             <input name="jadwal_siswa" placeholder="Jadwal Konseling" class="textbox-n mb-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <div class="input-group mb-3">
                                                 <input type="text" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Komentar" name="komentar" rows="3"></textarea>
                                             </div>
                                             <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimsosial') }}" style="color: #fff;">Kembali</a></button>
                                         </form>

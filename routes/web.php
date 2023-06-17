@@ -190,3 +190,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:murid']], function () {
     Route::post('/insertbimpelajarsiswa', [UIMuridController::class, 'insertbimpelajarsiswa'])->name('insertbimpelajarsiswa');
     Route::get('/detailbimpelajarsiswa/{id}', [UIMuridController::class, 'detailbimpelajarsiswa'])->name('detailbimpelajarsiswa');
 });
+
+//SELECT2
+Route::resource('posts', UIGuruController::class);

@@ -11,7 +11,7 @@ class BimbinganSosial extends Model
     protected $table = "bimbingan_sosial";
     protected $primaryKey = "id";
     protected $fillable = [
-        'nama_siswa', 'jadwal_siswa', 'konflik_permasalahan', 'status', 'hasil', 'tindak_lanjut'
+        'nama_siswa', 'jadwal_siswa', 'konflik_permasalahan', 'komentar', 'status', 'hasil', 'tindak_lanjut'
     ];
 
     public function siswa()

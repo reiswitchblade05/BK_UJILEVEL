@@ -182,6 +182,7 @@ class UIGuruController extends Controller
             'nama_siswa' => $request->nama_siswa,
             'jadwal_siswa' => $request->jadwal_siswa,
             'konflik_permasalahan' => $request->konflik_permasalahan,
+            'komentar' => $request->komentar,
             'status' => 'Diproses',
         ]);
         return redirect()->route('bimsosial')->with('success', 'Data berhasil ditambahkan!');

@@ -252,6 +252,9 @@
                                             <div class="input-group mb-3">
                                                 <input type="text" name="konflik_permasalahan" placeholder="Permasalahan" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Komentar" name="komentar" rows="3"></textarea>
+                                            </div>
                                             <button type="submit" class="btn-tambah">Tambah Data</button> <button class="btn-back"><a href="{{ url('bimsosialsiswa') }}" style="color: #fff;">Kembali</a></button>
                                         </form>
                                     </div>

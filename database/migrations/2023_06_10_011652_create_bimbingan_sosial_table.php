@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama_siswa');
             $table->dateTime('jadwal_siswa', $precision = 0);
             $table->string('konflik_permasalahan');
+            $table->text('komentar')->nullable();
             $table->enum('status', ['Diproses', 'Selesai']);
             $table->text('hasil')->nullable();
             $table->text('tindak_lanjut')->nullable();
