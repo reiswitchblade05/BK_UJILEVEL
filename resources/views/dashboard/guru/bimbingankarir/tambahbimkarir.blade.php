@@ -252,6 +252,7 @@
                                                 @endforeach
                                             </select>
                                             <input name="jadwal_bimbingan" placeholder="Jadwal Konseling" class="textbox-n" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
+                                            <input name="jadwal_sosialisasi" placeholder="Jadwal Sosialisasi" class="textbox-n mt-3" type="text" onfocus="(this.type='datetime-local')" id="datetime-local" style="width: 100%; padding: 5px; padding-left: 10px;">
                                             <div class="input-group mb-3 mt-3">
                                                 <input type="text" name="karir" placeholder="Karir" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                                             </div>

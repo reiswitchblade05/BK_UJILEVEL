@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\LoginController;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +19,4 @@ use App\Http\Controllers\API\LoginController;
 //     return $request->user();
 // });
 
-route::post('/auth/login', [LoginController::class, 'loginAPI'])->name('loginAPI');
+route::post('/auth/login', [ApiController::class, 'loginApi'])->name('loginApi');

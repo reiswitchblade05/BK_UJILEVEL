@@ -45,6 +45,7 @@ class UIGuruController extends Controller
         BimbinganKarir::create([
             'nama_siswa' => $request->nama_siswa,
             'jadwal_bimbingan' => $request->jadwal_bimbingan,
+            'jadwal_sosialisasi' => $request->jadwal_sosialisasi,
             'karir' => $request->karir,
             'alasan_siswa' => $request->alasan_siswa,
             'tujuan_siswa' => $request->tujuan_siswa,
