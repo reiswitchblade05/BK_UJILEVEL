@@ -19,4 +19,4 @@ use App\Http\Controllers\ApiController;
 //     return $request->user();
 // });
 
-route::post('/auth/login', [ApiController::class, 'loginApi'])->name('loginApi');
+route::post('/login', [ApiController::class, 'loginApi'])->name('loginApi');
